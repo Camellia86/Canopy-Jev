@@ -1,0 +1,8 @@
+{
+  "state": "A fictional service has one waiting job and its worker is available.",
+  "questions": [
+    {"id": "dispatch", "type": "choice", "question": "Which action should the scheduler consider next?", "criteria": {"dispatch": "Send the waiting job to the available worker", "wait": "Leave the worker idle"}},
+    {"id": "capacity", "type": "noul", "question": "Is there an available worker?", "criteria": {"false": "No worker is available", "true": "At least one worker is available"}},
+    {"id": "load", "type": "score", "question": "How busy is the queue relative to this one worker?", "levels": ["Empty queue", "One waiting job", "Many waiting jobs"]}
+  ]
+}

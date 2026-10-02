@@ -1,0 +1,430 @@
+{
+  "schema": 1,
+  "passed": true,
+  "model": "Canopy-Jev 27B",
+  "checkpoint_sha256": "506410609a6ba6eb422182fddda095b81fa4923011ceaa3717e85a74817237f4",
+  "template": "zero_shot_choice",
+  "actual_call": "CanopyJev.predict(state, questions), default template",
+  "hardware": {
+    "gpu_name": "NVIDIA H200",
+    "total_gib": 139.81158447265625,
+    "compute_capability": [
+      9,
+      0
+    ],
+    "cpu_threads": 6
+  },
+  "shared_device": true,
+  "load_seconds_separate": 37.57570480927825,
+  "warmups_per_fixture": 3,
+  "measured_repeats_per_fixture": 20,
+  "raw_rows": 180,
+  "cases": [
+    {
+      "name": "short_q1",
+      "state_tokens_standalone": 31,
+      "questions": 1,
+      "candidate_counts": [
+        4
+      ],
+      "full_prompt_tokens": [
+        120
+      ],
+      "shared_prefix_tokens": 84,
+      "branch_tokens": [
+        36
+      ],
+      "packed_tokens": 120,
+      "tokens_sha256": "92f9d568a90c3d483b120021ae676b88efe8308668c3989e8a4fc725cd49fb4d",
+      "fixture_sha256": "d034412559230ada1b60bb6508c3b3e4e57b2762654ff126232676efd389989f",
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.2748136520385742,
+        "p95_seconds": 0.2853613061830401,
+        "mean_seconds": 0.2766280321404338,
+        "min_seconds": 0.2703657131642103,
+        "max_seconds": 0.2873303387314081
+      },
+      "warmup_seconds_excluded": [
+        15.281688826158643,
+        0.2727931011468172,
+        0.26689592748880386
+      ],
+      "output_sha256": "32d30d196bcd78ec9cbcaddad7c07442859158a21880cd5bdde285a4577983f0",
+      "peak_allocated_gib": 48.05655908584595,
+      "peak_reserved_gib": 48.076171875
+    },
+    {
+      "name": "short_q4",
+      "state_tokens_standalone": 31,
+      "questions": 4,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "full_prompt_tokens": [
+        120,
+        119,
+        118,
+        119
+      ],
+      "shared_prefix_tokens": 72,
+      "branch_tokens": [
+        48,
+        47,
+        46,
+        47
+      ],
+      "packed_tokens": 260,
+      "tokens_sha256": "41479a73117d2ffa2b865d92de9a873a5de78eab485b219fa8d01a76b4d2c0b7",
+      "fixture_sha256": "cdbd0b9c0f04d82c3e6abad5ebd0297f79c513bdf1225b9d3f3863ca82f41551",
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.2832049932330847,
+        "p95_seconds": 0.3115239404141903,
+        "mean_seconds": 0.28723229598253963,
+        "min_seconds": 0.2743164040148258,
+        "max_seconds": 0.33872790075838566
+      },
+      "warmup_seconds_excluded": [
+        1.1949842795729637,
+        0.29359837621450424,
+        0.2806923855096102
+      ],
+      "output_sha256": "7ba3038aae0636ab71cfc6a1380aa43cb11172a4fe877701a14ee7a91480a838",
+      "peak_allocated_gib": 48.06899642944336,
+      "peak_reserved_gib": 48.326171875
+    },
+    {
+      "name": "short_q8",
+      "state_tokens_standalone": 31,
+      "questions": 8,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "full_prompt_tokens": [
+        120,
+        119,
+        118,
+        119,
+        126,
+        119,
+        119,
+        119
+      ],
+      "shared_prefix_tokens": 71,
+      "branch_tokens": [
+        49,
+        48,
+        47,
+        48,
+        55,
+        48,
+        48,
+        48
+      ],
+      "packed_tokens": 462,
+      "tokens_sha256": "2dabf834cd32951ac7704d0eec15a37f1c7f2a47b98699be604817ad4296c38a",
+      "fixture_sha256": "b906b1798f989fe442d180cc88484cb243d697ec615b2d9cb6daf3cd8bd5a879",
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.3020804896950722,
+        "p95_seconds": 0.3176125980913639,
+        "mean_seconds": 0.302424353081733,
+        "min_seconds": 0.2850265111774206,
+        "max_seconds": 0.31864065676927567
+      },
+      "warmup_seconds_excluded": [
+        1.2097098398953676,
+        0.28870161063969135,
+        0.3036876656115055
+      ],
+      "output_sha256": "7e99567b111cd548cd8eba11c12fad2974333e37b6aa957ba5b3c64008108455",
+      "peak_allocated_gib": 48.10653734207153,
+      "peak_reserved_gib": 48.326171875
+    },
+    {
+      "name": "medium_q1",
+      "state_tokens_standalone": 511,
+      "questions": 1,
+      "candidate_counts": [
+        4
+      ],
+      "full_prompt_tokens": [
+        600
+      ],
+      "shared_prefix_tokens": 564,
+      "branch_tokens": [
+        36
+      ],
+      "packed_tokens": 600,
+      "tokens_sha256": "7ef9c7d9445717643d0bb50771cb2f655c63c03747f3cbf31b53c5e7e176b530",
+      "fixture_sha256": "56436f5d7af42df7878ce10158cd7ed50e34a746eea95f616028e237ec8f4388",
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.2715025944635272,
+        "p95_seconds": 0.28151461780071263,
+        "mean_seconds": 0.27286208150908353,
+        "min_seconds": 0.26283540949225426,
+        "max_seconds": 0.30815398320555687
+      },
+      "warmup_seconds_excluded": [
+        0.2819524612277746,
+        0.27873001247644424,
+        0.2772746980190277
+      ],
+      "output_sha256": "b18e46329356a00f61be799e8018e7dd289437c3f809159ada9d521530f54e9e",
+      "peak_allocated_gib": 47.92637586593628,
+      "peak_reserved_gib": 48.326171875
+    },
+    {
+      "name": "medium_q4",
+      "state_tokens_standalone": 511,
+      "questions": 4,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "full_prompt_tokens": [
+        600,
+        599,
+        598,
+        599
+      ],
+      "shared_prefix_tokens": 552,
+      "branch_tokens": [
+        48,
+        47,
+        46,
+        47
+      ],
+      "packed_tokens": 740,
+      "tokens_sha256": "8ad43ba6e40963cd92dab39ebeb183bb977273d73c03c6196e7e64e4d882af4b",
+      "fixture_sha256": "ab54d734bae9b6138104ec6070936f775696d22167a38a00f68416efe560f64e",
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.27939778193831444,
+        "p95_seconds": 0.2958117426373065,
+        "mean_seconds": 0.2818837011232972,
+        "min_seconds": 0.27079089917242527,
+        "max_seconds": 0.3033554255962372
+      },
+      "warmup_seconds_excluded": [
+        0.28849625401198864,
+        0.2779171820729971,
+        0.29553116485476494
+      ],
+      "output_sha256": "8cd2476a608d7e118768c0a25b9604d6dbd1efd873b575ee75ce37763a789b20",
+      "peak_allocated_gib": 47.96480131149292,
+      "peak_reserved_gib": 48.326171875
+    },
+    {
+      "name": "medium_q8",
+      "state_tokens_standalone": 511,
+      "questions": 8,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "full_prompt_tokens": [
+        600,
+        599,
+        598,
+        599,
+        606,
+        599,
+        599,
+        599
+      ],
+      "shared_prefix_tokens": 551,
+      "branch_tokens": [
+        49,
+        48,
+        47,
+        48,
+        55,
+        48,
+        48,
+        48
+      ],
+      "packed_tokens": 942,
+      "tokens_sha256": "834e40aca47184fba75f911e346f48f5549c155c67b09259f32abc7a51e2eb10",
+      "fixture_sha256": "1bca991076d8f13ac1cf345a31aede32b3cbc5906566aac136cbc9e8b4c24983",
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.33982210606336594,
+        "p95_seconds": 0.34754618220031264,
+        "mean_seconds": 0.33523131255060434,
+        "min_seconds": 0.3191925659775734,
+        "max_seconds": 0.35034243017435074
+      },
+      "warmup_seconds_excluded": [
+        0.3300647307187319,
+        0.33672936633229256,
+        0.333322836086154
+      ],
+      "output_sha256": "77eb94c7e3e2d17ce48382ce1d09ccf1a7ce788c3da28d29b2ba9bbaf8bfd280",
+      "peak_allocated_gib": 48.0204963684082,
+      "peak_reserved_gib": 48.326171875
+    },
+    {
+      "name": "long_q1",
+      "state_tokens_standalone": 2048,
+      "questions": 1,
+      "candidate_counts": [
+        4
+      ],
+      "full_prompt_tokens": [
+        2137
+      ],
+      "shared_prefix_tokens": 2101,
+      "branch_tokens": [
+        36
+      ],
+      "packed_tokens": 2137,
+      "tokens_sha256": "823e1a0d4fe8f451fab91fad8c9827e0bcc88a03d1d7db6e93c308c7404b8b8c",
+      "fixture_sha256": "d74358af68441e86aa86ea308ba9b6bab461e7ceff4afe2e59b3d673b635588f",
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.575244152918458,
+        "p95_seconds": 0.5946627269499004,
+        "mean_seconds": 0.564494217466563,
+        "min_seconds": 0.526975229382515,
+        "max_seconds": 0.5992722921073437
+      },
+      "warmup_seconds_excluded": [
+        2.656181111931801,
+        0.5747137237340212,
+        0.5993597581982613
+      ],
+      "output_sha256": "69d1ebe70601ca9880177e5467afe13070aeba7259aefcf16aca1df3fa525d2d",
+      "peak_allocated_gib": 48.282095432281494,
+      "peak_reserved_gib": 48.576171875
+    },
+    {
+      "name": "long_q4",
+      "state_tokens_standalone": 2048,
+      "questions": 4,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "full_prompt_tokens": [
+        2137,
+        2136,
+        2135,
+        2136
+      ],
+      "shared_prefix_tokens": 2089,
+      "branch_tokens": [
+        48,
+        47,
+        46,
+        47
+      ],
+      "packed_tokens": 2277,
+      "tokens_sha256": "b14bf1da303ac81e88fb592900ca30fabc7fe7599ec9a7ca46de0184c6f3161c",
+      "fixture_sha256": "0e2f63f8f1b44156aaba38a6e10e5d081845edefb3d5a04a690201896be891d8",
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.6125540332868695,
+        "p95_seconds": 0.6331597796641291,
+        "mean_seconds": 0.6157275930047035,
+        "min_seconds": 0.5754777304828167,
+        "max_seconds": 0.6347530260682106
+      },
+      "warmup_seconds_excluded": [
+        0.6194749251008034,
+        0.5952306594699621,
+        0.6167591791599989
+      ],
+      "output_sha256": "cf1238175ae1076fd2fdea5851fd1cc61a6bf13c429d2171542f3e22d511ddab",
+      "peak_allocated_gib": 48.3216028213501,
+      "peak_reserved_gib": 48.576171875
+    },
+    {
+      "name": "long_q8",
+      "state_tokens_standalone": 2048,
+      "questions": 8,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "full_prompt_tokens": [
+        2137,
+        2136,
+        2135,
+        2136,
+        2143,
+        2136,
+        2136,
+        2136
+      ],
+      "shared_prefix_tokens": 2088,
+      "branch_tokens": [
+        49,
+        48,
+        47,
+        48,
+        55,
+        48,
+        48,
+        48
+      ],
+      "packed_tokens": 2479,
+      "tokens_sha256": "774011290f5b5d17f8c28f4ed1ee46afa1f605fbd5e9fd4eea98347a183dc96f",
+      "fixture_sha256": "f73e6ef708a6cb8c93c053770eca5cad7ac883c621d004eaf46b41bdf58c43f9",
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.7409090576693416,
+        "p95_seconds": 0.7622640039771795,
+        "mean_seconds": 0.7366099889390171,
+        "min_seconds": 0.702928813174367,
+        "max_seconds": 0.7644508741796017
+      },
+      "warmup_seconds_excluded": [
+        0.7108675371855497,
+        0.7349724154919386,
+        0.742327157407999
+      ],
+      "output_sha256": "9aca4dbfb5c1513734a057458a13e2c67eca256352c7f36cc2dd9e3fc211f6bd",
+      "peak_allocated_gib": 48.37731409072876,
+      "peak_reserved_gib": 48.576171875
+    }
+  ],
+  "independent_audit_sha256": "6a04b023919aa81aa0dfb6301e6235d36a587d7c0a67d83d34e0fd207a930725",
+  "receipt_sha256": "b2eda5dc7d8da56e23124a62c49704974ba39ae280eb753b183c7ef896ea2ed8",
+  "worker_exit_code_observed": 0,
+  "scope": "Synchronized full default zero-shot API requests including input validation, rendering/tokenization, fresh full64 tree, isolated branches, native decode, CPU transfer and UTF8 JSON encoding. No HTTP or model loading inside request timers.",
+  "limitations": [
+    "Nine fixed synthetic label-free workloads, no correctness score.",
+    "Shared H200; occupancy recorded, other workloads not controlled.",
+    "Empirical P50/P95 over20 repetitions, no population uncertainty interval.",
+    "Legacy five-demonstration latency remains a separate measured prompt domain; no controlled speedup over competitors or across hardware."
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "schema": 1,
+  "passed": true,
+  "model": "Canopy-Jev-27B",
+  "contract": {
+    "checkpoint_sha256": "506410609a6ba6eb422182fddda095b81fa4923011ceaa3717e85a74817237f4",
+    "repeats": 20,
+    "warmups": 3,
+    "include_prepared_token_timing": false,
+    "protocol": "Legacy v4 Choice API; five official category demonstrations; request-local longest common prefix; actual fresh full64 tree",
+    "not_canonical_B1_protocol": true,
+    "not_cached_h60": true,
+    "generated_tokens": 0,
+    "load_seconds_separate": 137.4948478732258,
+    "request_timer": "perf_counter; synchronize target CUDA device immediately before and after; includes JSON serialization",
+    "statistics": "Median and linearly interpolated empirical p95; repeated same fixtures, no population uncertainty CI",
+    "validation_scope": "Latency workload only; no correctness score, benchmark accuracy, or canonical-root/B1 equivalence claim"
+  },
+  "hardware": {
+    "gpu_name": "NVIDIA H200",
+    "gpu_total_gib": 139.81158447265625,
+    "compute_capability": [
+      9,
+      0
+    ],
+    "cpu_threads": 6
+  },
+  "shared_device": true,
+  "cases": [
+    {
+      "name": "short_q1",
+      "questions": 1,
+      "candidate_counts": [
+        4
+      ],
+      "lengths": {
+        "state_characters": 185,
+        "state_utf8_bytes": 185,
+        "question_text_characters": [
+          51
+        ],
+        "query_full_prompt_tokens": [
+          1508
+        ],
+        "query_branch_tokens": [
+          1
+        ],
+        "shared_prefix_tokens": 1507,
+        "packed_tokens": 1508,
+        "independent_tokens": 1508,
+        "state_tokens_standalone": 31
+      },
+      "warmup_seconds_excluded": [
+        0.2492627017199993,
+        0.23386473208665848,
+        0.2362262699753046
+      ],
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.2310120202600956,
+        "p95_seconds": 0.243593390006572,
+        "mean_seconds": 0.23267733482643962,
+        "min_seconds": 0.22692666575312614,
+        "max_seconds": 0.25120995566248894
+      },
+      "peak_allocated_gib": 48.13513231277466,
+      "peak_reserved_gib": 51.146484375,
+      "output_sha256": "119d5eb61f3b45fd4d7d60fdad9b188749f76cf5709ed059a6eae15c6029176d"
+    },
+    {
+      "name": "short_q4",
+      "questions": 4,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "lengths": {
+        "state_characters": 185,
+        "state_utf8_bytes": 185,
+        "question_text_characters": [
+          51,
+          48,
+          52,
+          45
+        ],
+        "query_full_prompt_tokens": [
+          1508,
+          1507,
+          1506,
+          1507
+        ],
+        "query_branch_tokens": [
+          48,
+          47,
+          46,
+          47
+        ],
+        "shared_prefix_tokens": 1460,
+        "packed_tokens": 1648,
+        "independent_tokens": 6028,
+        "state_tokens_standalone": 31
+      },
+      "warmup_seconds_excluded": [
+        0.782494256272912,
+        0.28716868720948696,
+        0.28382098115980625
+      ],
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.28236972261220217,
+        "p95_seconds": 0.287474206648767,
+        "mean_seconds": 0.2829384498298168,
+        "min_seconds": 0.27853057347238064,
+        "max_seconds": 0.29145297408103943
+      },
+      "peak_allocated_gib": 48.17480421066284,
+      "peak_reserved_gib": 51.146484375,
+      "output_sha256": "0503ce1f52a878dfaa316a8072bcba4085da09a602aa97830fc5e458d1695832"
+    },
+    {
+      "name": "short_q8",
+      "questions": 8,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "lengths": {
+        "state_characters": 185,
+        "state_utf8_bytes": 185,
+        "question_text_characters": [
+          51,
+          48,
+          52,
+          45,
+          51,
+          45,
+          54,
+          53
+        ],
+        "query_full_prompt_tokens": [
+          1508,
+          1507,
+          1506,
+          1507,
+          1514,
+          1507,
+          1507,
+          1507
+        ],
+        "query_branch_tokens": [
+          49,
+          48,
+          47,
+          48,
+          55,
+          48,
+          48,
+          48
+        ],
+        "shared_prefix_tokens": 1459,
+        "packed_tokens": 1850,
+        "independent_tokens": 12063,
+        "state_tokens_standalone": 31
+      },
+      "warmup_seconds_excluded": [
+        0.8079201169312,
+        0.2942873388528824,
+        0.30036939680576324
+      ],
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.3002675659954548,
+        "p95_seconds": 0.31552772214636204,
+        "mean_seconds": 0.30268892431631683,
+        "min_seconds": 0.2951212599873543,
+        "max_seconds": 0.3195764720439911
+      },
+      "peak_allocated_gib": 48.23028612136841,
+      "peak_reserved_gib": 51.146484375,
+      "output_sha256": "d2d24119b3c702f71a6074cb82d63be5f8e0137c10a9cdd0394d5b896c344b24"
+    },
+    {
+      "name": "medium_q1",
+      "questions": 1,
+      "candidate_counts": [
+        4
+      ],
+      "lengths": {
+        "state_characters": 3076,
+        "state_utf8_bytes": 3076,
+        "question_text_characters": [
+          51
+        ],
+        "query_full_prompt_tokens": [
+          1988
+        ],
+        "query_branch_tokens": [
+          1
+        ],
+        "shared_prefix_tokens": 1987,
+        "packed_tokens": 1988,
+        "independent_tokens": 1988,
+        "state_tokens_standalone": 511
+      },
+      "warmup_seconds_excluded": [
+        0.2872740142047405,
+        0.2842182256281376,
+        0.28407503850758076
+      ],
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.28439463302493095,
+        "p95_seconds": 0.28553383592516185,
+        "mean_seconds": 0.28445362159982324,
+        "min_seconds": 0.2835280951112509,
+        "max_seconds": 0.2861031200736761
+      },
+      "peak_allocated_gib": 48.24667692184448,
+      "peak_reserved_gib": 51.146484375,
+      "output_sha256": "d3c98883676c8b65314036732a98860edd9ee4f36b41da02355a5f751e75f8dc"
+    },
+    {
+      "name": "medium_q4",
+      "questions": 4,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "lengths": {
+        "state_characters": 3076,
+        "state_utf8_bytes": 3076,
+        "question_text_characters": [
+          51,
+          48,
+          52,
+          45
+        ],
+        "query_full_prompt_tokens": [
+          1988,
+          1987,
+          1986,
+          1987
+        ],
+        "query_branch_tokens": [
+          48,
+          47,
+          46,
+          47
+        ],
+        "shared_prefix_tokens": 1940,
+        "packed_tokens": 2128,
+        "independent_tokens": 7948,
+        "state_tokens_standalone": 511
+      },
+      "warmup_seconds_excluded": [
+        0.32113176956772804,
+        0.3194211460649967,
+        0.3200743794441223
+      ],
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.31977596040815115,
+        "p95_seconds": 0.32065837234258654,
+        "mean_seconds": 0.3197913970798254,
+        "min_seconds": 0.31834933161735535,
+        "max_seconds": 0.32073356956243515
+      },
+      "peak_allocated_gib": 48.2862024307251,
+      "peak_reserved_gib": 51.146484375,
+      "output_sha256": "d80902db90705d00eda231a2941d88c96856c24a77df60e93eb5dba1db504927"
+    },
+    {
+      "name": "medium_q8",
+      "questions": 8,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "lengths": {
+        "state_characters": 3076,
+        "state_utf8_bytes": 3076,
+        "question_text_characters": [
+          51,
+          48,
+          52,
+          45,
+          51,
+          45,
+          54,
+          53
+        ],
+        "query_full_prompt_tokens": [
+          1988,
+          1987,
+          1986,
+          1987,
+          1994,
+          1987,
+          1987,
+          1987
+        ],
+        "query_branch_tokens": [
+          49,
+          48,
+          47,
+          48,
+          55,
+          48,
+          48,
+          48
+        ],
+        "shared_prefix_tokens": 1939,
+        "packed_tokens": 2330,
+        "independent_tokens": 15903,
+        "state_tokens_standalone": 511
+      },
+      "warmup_seconds_excluded": [
+        0.3637759108096361,
+        0.36183859780430794,
+        0.3638582304120064
+      ],
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.36326339934021235,
+        "p95_seconds": 0.36763915587216617,
+        "mean_seconds": 0.3653812610544264,
+        "min_seconds": 0.3614805918186903,
+        "max_seconds": 0.40238495357334614
+      },
+      "peak_allocated_gib": 48.341858863830566,
+      "peak_reserved_gib": 51.146484375,
+      "output_sha256": "905c075d461051c1c1503f5b4cee9fd06d6b9f9d02f41314029c0c6de7addbe4"
+    },
+    {
+      "name": "long_q1",
+      "questions": 1,
+      "candidate_counts": [
+        4
+      ],
+      "lengths": {
+        "state_characters": 12287,
+        "state_utf8_bytes": 12287,
+        "question_text_characters": [
+          51
+        ],
+        "query_full_prompt_tokens": [
+          3525
+        ],
+        "query_branch_tokens": [
+          1
+        ],
+        "shared_prefix_tokens": 3524,
+        "packed_tokens": 3525,
+        "independent_tokens": 3525,
+        "state_tokens_standalone": 2048
+      },
+      "warmup_seconds_excluded": [
+        0.4867018610239029,
+        0.49111165665090084,
+        0.48987883888185024
+      ],
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.4912969060242176,
+        "p95_seconds": 0.49424243150278924,
+        "mean_seconds": 0.49155953293666244,
+        "min_seconds": 0.4890628047287464,
+        "max_seconds": 0.4946826137602329
+      },
+      "peak_allocated_gib": 48.606886863708496,
+      "peak_reserved_gib": 51.146484375,
+      "output_sha256": "e053d77d92e26d803446eeca4f5e53b51014d355c51ea9e39066c9b4e3544615"
+    },
+    {
+      "name": "long_q4",
+      "questions": 4,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "lengths": {
+        "state_characters": 12287,
+        "state_utf8_bytes": 12287,
+        "question_text_characters": [
+          51,
+          48,
+          52,
+          45
+        ],
+        "query_full_prompt_tokens": [
+          3525,
+          3524,
+          3523,
+          3524
+        ],
+        "query_branch_tokens": [
+          48,
+          47,
+          46,
+          47
+        ],
+        "shared_prefix_tokens": 3477,
+        "packed_tokens": 3665,
+        "independent_tokens": 14096,
+        "state_tokens_standalone": 2048
+      },
+      "warmup_seconds_excluded": [
+        0.5473113860934973,
+        0.5288816597312689,
+        0.5284355748444796
+      ],
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.5295105054974556,
+        "p95_seconds": 0.5319579124450684,
+        "mean_seconds": 0.5298712301999331,
+        "min_seconds": 0.5281459391117096,
+        "max_seconds": 0.5326825138181448
+      },
+      "peak_allocated_gib": 48.64701557159424,
+      "peak_reserved_gib": 51.146484375,
+      "output_sha256": "880a3c37e40379eeb3900aaacfc003d434fe3ab2329d5ba3f04a510c8a66400e"
+    },
+    {
+      "name": "long_q8",
+      "questions": 8,
+      "candidate_counts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "lengths": {
+        "state_characters": 12287,
+        "state_utf8_bytes": 12287,
+        "question_text_characters": [
+          51,
+          48,
+          52,
+          45,
+          51,
+          45,
+          54,
+          53
+        ],
+        "query_full_prompt_tokens": [
+          3525,
+          3524,
+          3523,
+          3524,
+          3531,
+          3524,
+          3524,
+          3524
+        ],
+        "query_branch_tokens": [
+          49,
+          48,
+          47,
+          48,
+          55,
+          48,
+          48,
+          48
+        ],
+        "shared_prefix_tokens": 3476,
+        "packed_tokens": 3867,
+        "independent_tokens": 28199,
+        "state_tokens_standalone": 2048
+      },
+      "warmup_seconds_excluded": [
+        0.5882062166929245,
+        0.5901822037994862,
+        0.5911432653665543
+      ],
+      "full_request": {
+        "n": 20,
+        "median_seconds": 0.5888909660279751,
+        "p95_seconds": 0.5932986000552773,
+        "mean_seconds": 0.5900372877717018,
+        "min_seconds": 0.5868969690054655,
+        "max_seconds": 0.6031665541231632
+      },
+      "peak_allocated_gib": 48.70289850234985,
+      "peak_reserved_gib": 51.146484375,
+      "output_sha256": "3dfb250266bb308a8c10d3f1ad435d4fb8863b51cec1c7e708306e31adbbc2a7"
+    }
+  ],
+  "raw_rows": 180,
+  "all_recorded_outputs_bitexact_across_repeats": true,
+  "all_lengths_and_summary_statistics_replayed": true,
+  "independent_audit_sha256": "2395c8ba6bfee089e6e790910977892b90c5397e54aa81c7cfa759d50699dced",
+  "receipt_sha256": "601496b4d7d5da62b236cc6bf32ea0ce37b6a3accd33a3dcb3d00aba75cb0963",
+  "native_worker_exit_code_observed": false,
+  "scope": "All180timings and complete output independently audited; historical supervisor exited early after worker start, so no observed worker exit code is claimed",
+  "limitations": [
+    "Legacy five-demo prompt; default zero-shot latency is not measured by this study",
+    "Shared GPU, no cross-hardware or network-inclusive speed comparison"
+  ]
+}

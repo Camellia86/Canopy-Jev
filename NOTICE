@@ -1,0 +1,23 @@
+Canopy-Jev
+Copyright (c) 2026 Ruoxi Qiu
+
+Original project code and documentation are distributed under the MIT License.
+See LICENSE for the complete terms.
+
+The inference artifacts adapt Qwen/Qwen3.8-27B, revision
+1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0, by the Qwen Team.
+The Qwen base is distributed under the Apache License, Version 2.0.
+See licenses/QWEN_APACHE_2_0.txt and WEIGHTS_LICENSE.md.
+
+Modification notice: Canopy-Jev freezes the base text backbone, adapts an
+independent copy of its last four text layers with trained LoRA matrices,
+and uses a trained ten-letter numerical prior. Base-derived inference
+components retain the Qwen Apache-2.0 terms; the original base weights
+are not bundled in this repository.
+
+Canopy-Jev is an independent research implementation. TypeSafe's Jev,
+Open-Jev, NeoHorse-Jev and Qwen are credited references or upstream models;
+no affiliation or endorsement is implied.
+
+Benchmark data and installed dependencies retain their respective terms.
+See THIRD_PARTY_NOTICES.md. The private architecture notes PDF is not included.

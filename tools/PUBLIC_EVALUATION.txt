@@ -1,0 +1,65 @@
+Public evaluation tools (run from the complete release checkout)
+
+1. Prepare public data using prepare_openjev_data.py. Keep its inputs, references,
+   unsupported-ID files and manifest together. Do not remove unsupported rows.
+
+2. Inference example for one prepared public Test split:
+
+python tools/evaluate_public.py \
+  --inputs data/public_v1_1/test_inputs.jsonl \
+  --references data/public_v1_1/test_references.jsonl \
+  --unsupported data/public_v1_1/test_unsupported.jsonl \
+  --manifest data/public_v1_1/manifest.json \
+  --artifacts artifacts \
+  --base-model Qwen/Qwen3.8-27B \
+  --revision 1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0 \
+  --out outputs/test-shard-0 --num-shards 1 --shard-index 0
+
+Add --preflight to tokenize and inspect coverage without loading model weights.
+Use a compatible local base directory and --local-files-only to avoid downloads.
+JF100 preparation instead writes inputs.jsonl and references.jsonl; omit
+--unsupported when its manifest has no unsupported rows.
+
+For several GPUs, launch one process per device with distinct --shard-index and
+output directory, sharing the same --num-shards. Supported inputs are assigned by
+SHA256 of their exact serialized state modulo N. String states are used directly;
+other states use json.dumps(..., ensure_ascii=False), preserving insertion order
+and default spaces. This keeps siblings together. Unsupported IDs use SHA256(id)
+modulo N. Grouping and tree geometry are deterministic within each state.
+
+Default policy: at most 10 candidates; full joint prompt cap 4096 tokens; pack
+budget 6000; maximum 16 questions per pack. Nothing is truncated. A single row may
+exceed the pack budget but may not exceed its input-token cap or the runtime's
+16384-token limit. Loading still requires at least 64 GiB free GPU memory.
+
+Inference hashes references but never parses them. Each planned ID receives a
+probability vector or an explicit K/length-failure record. Fatal runtime errors
+leave an incomplete run without completion.json; scoring such runs is refused.
+No fallback probability, retraining or temperature fitting is performed.
+
+3. Score only after ALL shard completion receipts exist:
+
+python tools/score_public.py \
+  --runs outputs/test-shard-0 outputs/test-shard-1 \
+  --out outputs/test-aggregate.json
+
+Use just one --runs path when --num-shards was 1. The scorer first checks current
+and snapshotted source hashes, manifest/data hashes, every shard exactly once,
+planned/output ID coverage, native float32 probabilities, failure statuses and
+batch arithmetic. Only then does it parse reference targets.
+
+The report separates all-planned hard accuracy (K/length failures are incorrect)
+from valid-only hard accuracy. Soft distributions are never hardened. Cross-
+entropy, distribution Brier, expected one-hot Brier and ordinal expected absolute
+error use valid probability rows only and disclose coverage. Aggregates are given
+for each source, split and (source, group_id), with equal-group macro metrics.
+No per-question error list is generated. No clustered CI is inferred.
+
+This generic scorer uses first-candidate argmax ties. It is for the prepared
+JF100/public Open-Jev distribution schema, not a replacement for JevBench231's
+original upstream scorer and its lexicographic-key tie rule. It also does not
+replace the separate independent audit of the research runs. Prepared public
+projection denominators may differ from the original internal benchmark.
+
+CPU synthetic checks (no real references or GPU):
+python tools/test_public.py

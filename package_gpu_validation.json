@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "synthetic_label_free_inputs": true,
+  "GPU_used": true,
+  "reference_source_sha256": "0f636f4ed228fa8905ffdea86d344500107f53a81ff45cd23c860c5056c56aee",
+  "reference_checkpoint_sha256": "506410609a6ba6eb422182fddda095b81fa4923011ceaa3717e85a74817237f4",
+  "artifact_manifest_sha256": "0d03c9b4d7aa7c518843e043225503cfd03d701c2e4106fe3f340f56874fcdfc",
+  "cases": [
+    {
+      "case": 0,
+      "questions": 1,
+      "candidate_counts": [
+        2
+      ],
+      "root_tokens": 60,
+      "packed_tokens": 83,
+      "float32_probabilities_sha256": "b76ed1d29d37d6a03cd4d1fab5005d33335d05de79f5a3f6c58930721f6b691b",
+      "bitexact": true
+    },
+    {
+      "case": 1,
+      "questions": 2,
+      "candidate_counts": [
+        2,
+        3
+      ],
+      "root_tokens": 54,
+      "packed_tokens": 116,
+      "float32_probabilities_sha256": "b19636c4e9f6cbd229715933b91c480de449a8d72de44159b3770fc64ba31157",
+      "bitexact": true
+    },
+    {
+      "case": 2,
+      "questions": 2,
+      "candidate_counts": [
+        1,
+        10
+      ],
+      "root_tokens": 53,
+      "packed_tokens": 154,
+      "float32_probabilities_sha256": "6085b17254ab04e8e2c42c929b6bd2c543bb912a11460b0c275a9f8770b339b4",
+      "bitexact": true
+    }
+  ],
+  "reference_load_seconds": 56.33003620430827,
+  "portable_load_seconds": 33.25561814755201,
+  "peak_allocated_gib": 48.05051231384277,
+  "peak_reserved_gib": 48.30859375,
+  "scope": "Small fresh full-model same-token parity smoke; no benchmark score or general kernel equivalence claim",
+  "original_private_receipt_sha256": "9eb78a3b38e18139825e0ebf539514c32bb7b801e00cde41b206b17e2cfc8b00",
+  "numeric_library_versions": {}
+}

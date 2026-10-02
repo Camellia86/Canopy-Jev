@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "passed": true,
+  "CPU_only": true,
+  "synthetic_only": true,
+  "real_reference_files_parsed": false,
+  "GPU_used": false,
+  "tests_passed": 8,
+  "original_library_tests_passed": 11,
+  "original_library_real_tokenizer_checks_passed": true,
+  "sharding": "Supported inputs by exact serialized-state SHA256 mod N; unsupported by ID SHA256 mod N",
+  "checks": [
+    "direct option text (no duplicate key prefix)",
+    "K and joint-prompt length failures preserved",
+    "same-state sibling sharding",
+    "hard/soft/coverage metrics",
+    "manifest prevents omitted unsupported population",
+    "missing completion blocks reference reader",
+    "missing shard blocks reference reader",
+    "tampered outputs block reference reader",
+    "complete synthetic multishard scoring"
+  ],
+  "source_sha256": {
+    "tools/evaluate_public.py": "53399268b5e9184e6f32cce840030adc0b0dd65227fb17a1707d5179734d152b",
+    "tools/score_public.py": "7b4b90b1ebd5e6038db8ce9fb3c3b618949f2910e5412521dd166d37d1e51805",
+    "tools/test_public.py": "4633c05e103f8d0dd9a9cb6b36d2f06e69a01517383dfc75fde2a54e7a4f6237"
+  },
+  "wheel_sha256": "70975f3f17e0ddb62618f8160dec198857282ce92575ee76eb8b139480a07111",
+  "wheel_author": "Ruoxi Qiu",
+  "wheel_affiliation": null,
+  "wheel_email": null,
+  "wheel_license_and_citation_byte_match": true
+}

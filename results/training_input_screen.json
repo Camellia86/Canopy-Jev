@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "passed": true,
+  "scope": "Retrospective input-only normalized exact screen; no data or model changes",
+  "training_populations": {
+    "prior_v2_train": {
+      "rows": 10000,
+      "sources": {
+        "mmlu_aux": 10000
+      }
+    },
+    "v3_candidate_pool_not_all_ancestor_training": {
+      "rows": 89218,
+      "sources": {
+        "mmlu_aux": 89218
+      }
+    },
+    "v4_cached_train": {
+      "rows": 15488,
+      "sources": {
+        "mmlu_subject": 5488,
+        "supergpqa": 8000,
+        "aux_replay": 2000
+      }
+    },
+    "v4_eligible_pool": {
+      "rows": 15042,
+      "sources": {
+        "mmlu_subject": 5401,
+        "supergpqa": 7653,
+        "aux_replay": 1988
+      }
+    },
+    "continuation_step1200_exposed_rows": {
+      "rows": 9600,
+      "sources": {
+        "supergpqa": 4926,
+        "mmlu_subject": 3418,
+        "aux_replay": 1256
+      }
+    }
+  },
+  "checkpoints": {
+    "runs/qwen38_27b_v2/linear_rlcd.pt": "4620b120f1887a2240dc0cc748de9631b701e8db16a200450d3b41b4e25d6bee",
+    "runs/qwen38_27b_v4/tail_rlcd_0_step_1200.pt": "171197c2a7112f1dac183044a4e8472ba968d967c05528f9cda79f2a44720282",
+    "runs/v4_continuation_v1/rl64_weight01/step_1200.pt": "506410609a6ba6eb422182fddda095b81fa4923011ceaa3717e85a74817237f4"
+  },
+  "common_lock_sha256": "a35ed2a8937c994ec3d7e371d3d5cce42ddb7a4378ea03520917c4889189e9d6",
+  "eligible_indices_canonical_sha256": "6dfedcdae42c889cdb4c94d80690a96ce0fa2e64bc42cbb3f1d1996fe2f8dc4f",
+  "ordered_batches_canonical_sha256": "8da6bd77ca765b1896fade52ae03da5949649fe50f9028a2ccdae986170a8cec",
+  "continuation_step1200_exposed_indices_canonical_sha256": "a2934b481ee49f0c9d536f248a355117e89f22dcb131bfd87dd6fd985ba601e8",
+  "suites": {
+    "public_test": {
+      "input_rows_screened": 43125,
+      "screen": {
+        "prior_v2_train": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        },
+        "v3_candidate_pool_not_all_ancestor_training": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        },
+        "v4_cached_train": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        },
+        "v4_eligible_pool": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        },
+        "continuation_step1200_exposed_rows": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        }
+      }
+    },
+    "public_ood": {
+      "input_rows_screened": 84267,
+      "screen": {
+        "prior_v2_train": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        },
+        "v3_candidate_pool_not_all_ancestor_training": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        },
+        "v4_cached_train": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        },
+        "v4_eligible_pool": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        },
+        "continuation_step1200_exposed_rows": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        }
+      }
+    },
+    "jf100": {
+      "input_rows_screened": 100,
+      "screen": {
+        "prior_v2_train": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        },
+        "v3_candidate_pool_not_all_ancestor_training": {
+          "matched_evaluation_rows": {
+            "component_state_string_leaf": 4,
+            "question_component_exact": 4
+          },
+          "matched_training_rows": {
+            "question_component_exact": 1
+          },
+          "by_evaluation_source": {
+            "jf100": {
+              "component_state_string_leaf": 4,
+              "question_component_exact": 4
+            }
+          }
+        },
+        "v4_cached_train": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        },
+        "v4_eligible_pool": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        },
+        "continuation_step1200_exposed_rows": {
+          "matched_evaluation_rows": {},
+          "matched_training_rows": {},
+          "by_evaluation_source": {}
+        }
+      }
+    }
+  },
+  "normalization": "Existing prepare_data.normalize: Unicode casefold, regex \\w+ tokens joined by spaces; no transliteration or paraphrase matching.",
+  "comparison": "Each training question versus evaluation instructions, serialized state, state+instructions, and string leaves of structured state; also require order-independent normalized options for stronger match.",
+  "labels_used": false,
+  "evaluation_reference_files_read": false,
+  "model_output_files_read": false,
+  "limitations": [
+    "Question-component matches can be generic templates and are not automatically complete item duplicates.",
+    "This exact screen does not detect paraphrases, substring copies, translations, semantic overlap, or pretraining contamination.",
+    "The 89,218-row v3 candidate pool is a broad source screen, not all optimized ancestor training; v3 head is not this checkpoint ancestor.",
+    "The old training guard did not include new Open-Jev or JF100 benchmarks. This retrospective check does not establish prospective decontamination.",
+    "JF100 is covered as 100 original input items; archived workflow/browser/drone/game pilot inputs and closed-source/Wiki rows are not screened.",
+    "Official in-context demonstrations and base-model pretraining are outside the screened training pools."
+  ],
+  "independent_scope_receipt_sha256": "5f61c51b93a61db78344eaab9eaa2d747ca221ad7ed3b5c96f894b2141b51401"
+}

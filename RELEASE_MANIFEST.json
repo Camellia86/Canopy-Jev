@@ -1,0 +1,291 @@
+{
+  "schema": 2,
+  "name": "Canopy-Jev-27B",
+  "version": "0.1.0",
+  "author": "Ruoxi Qiu",
+  "code_license": "MIT",
+  "base_derived_artifacts_license": "Apache-2.0",
+  "source_checkpoint_sha256": "506410609a6ba6eb422182fddda095b81fa4923011ceaa3717e85a74817237f4",
+  "distribution": {
+    "code": "https://github.com/Camellia86/Canopy-Jev",
+    "weights": "https://huggingface.co/Camellia86/Canopy-Jev-27B",
+    "weights_install": "hf download Camellia86/Canopy-Jev-27B --include 'artifacts/*' --local-dir ."
+  },
+  "files": {
+    ".gitattributes": {
+      "bytes": 68,
+      "sha256": "9b031a840ab61b35d5bbdab7c0a4ee23914b43aabc5c014c1207f7a4817c38b1"
+    },
+    ".gitignore": {
+      "bytes": 210,
+      "sha256": "3eea6175066d50ba83524517c20ede7a7929804d56c1a723faf0c641a949c5be"
+    },
+    "CITATION.cff": {
+      "bytes": 382,
+      "sha256": "9b6619f7a6c96e717d1b82a026072df439805f056af5c7544203421ea8de058b"
+    },
+    "LICENSE": {
+      "bytes": 1066,
+      "sha256": "4af57f345694d4882a6ec032f85aba68a860d777129e3873b845bc6caa7a0568"
+    },
+    "MODEL_CARD.md": {
+      "bytes": 8118,
+      "sha256": "630dd3766dfbd383f111a16ac09a1cacd36f79783221a196e7a64e4873ab60fe"
+    },
+    "NOTICE": {
+      "bytes": 1068,
+      "sha256": "b319ff8dc3d2c50c89cefc1375280fbab6188098b7f0ed47f7f4575a14b5cdcf"
+    },
+    "README.md": {
+      "bytes": 7943,
+      "sha256": "18e5e827e8f19e1980ccf22a05e9d7afb770e7e4acdfc62fa8ddd1c2dcfb6c73"
+    },
+    "README.zh-CN.md": {
+      "bytes": 3506,
+      "sha256": "df6c6d5c237ae06193384f7e2c097840611c043390f950c33c2b42267a716181"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "bytes": 2506,
+      "sha256": "4ad55d3e90aa038f39a98c5eef6c54dbce16182a31e50928030ffdf3ef545665"
+    },
+    "WEIGHTS_LICENSE.md": {
+      "bytes": 1519,
+      "sha256": "49c15a832ed38f158bb9b134bf81e95038a36d0822d7fe890fe91d6ee2a7e181"
+    },
+    "artifacts/manifest.json": {
+      "bytes": 4725,
+      "sha256": "0d03c9b4d7aa7c518843e043225503cfd03d701c2e4106fe3f340f56874fcdfc"
+    },
+    "base_provenance.json": {
+      "bytes": 1440,
+      "sha256": "2e937937c50c77e85178cea28cb11869478d3868bd5f0e9536cf1330032f2082"
+    },
+    "clean_install_validation.json": {
+      "bytes": 4254,
+      "sha256": "c3cb9f597ea0144b6d18b16c5241d6e8bf3bc494a1bb438530b84be85095732c"
+    },
+    "docs/BENCHMARK_FIGURES.md": {
+      "bytes": 4468,
+      "sha256": "d3979ba154fed15f5c906a0f3289c15ee3aea25796f447dc33540f51043e8a43"
+    },
+    "docs/EVALUATION.md": {
+      "bytes": 12981,
+      "sha256": "727d98a4968a5a2d2e0878956115549afa6312aeaaf8b9bb6c150537d2ec6e26"
+    },
+    "docs/TRAINING.md": {
+      "bytes": 4990,
+      "sha256": "9d72045b63c792d7437ddad53a83c8c31fcdb66310195b42e05106afc1f182bc"
+    },
+    "docs/TRAINING_INPUT_SCREEN.md": {
+      "bytes": 3191,
+      "sha256": "f904d1b028f421f1270ad6357750fe07e9fd4036a45fb2cf1a53b941a1286f58"
+    },
+    "docs/assets/benchmark_comparison.pdf": {
+      "bytes": 34540,
+      "sha256": "756c4e9f9bdfc42b4653b8c0387ba37897dd466333daf3b222eec54a6f5eefe9"
+    },
+    "docs/assets/benchmark_comparison.png": {
+      "bytes": 119653,
+      "sha256": "ecc0ed806ba5686de38264aba0f6cdb2017d4272a6f136349ca03eacaa3d6366"
+    },
+    "docs/assets/benchmark_comparison.svg": {
+      "bytes": 12881,
+      "sha256": "d206c5fec2eeeb254d48ef9b471bc49243d9098d5958aaa0f2c00d946173df86"
+    },
+    "docs/assets/benchmark_overview.pdf": {
+      "bytes": 43985,
+      "sha256": "335ddc30c75bb712d66f195dbafaf4845f0c008f56f706109ec8655c62a26085"
+    },
+    "docs/assets/benchmark_overview.png": {
+      "bytes": 321328,
+      "sha256": "98594c39efce6661f0b719cb66a69dd3166750248069b2f4845ccc1ccdaef34b"
+    },
+    "docs/assets/benchmark_overview.svg": {
+      "bytes": 12196,
+      "sha256": "cd6c03518966455e39a8815035fd7b2212808e0e11befc9f22ddfe5b46424955"
+    },
+    "docs/assets/optimization_and_fixed_dev.png": {
+      "bytes": 1280845,
+      "sha256": "22bb77d6defa7286de7b56cd2fe0c55769742cd0cef962888c92f2444dbb70ff"
+    },
+    "docs/assets/training_objectives.png": {
+      "bytes": 1543680,
+      "sha256": "2da9a41bc8f7fd422b5a2a817429763f5d99610ce759c3846f094039adf7a0e3"
+    },
+    "examples/client.py": {
+      "bytes": 699,
+      "sha256": "054433cd6ef4fe1b71036501b6dd735375f0aa4633a838d3335565f858ef507b"
+    },
+    "examples/request.json": {
+      "bytes": 668,
+      "sha256": "11b45fcfb4e06b8c7e44ac7879c6156d70d98c7a47c15ce4fb31a673ccd7eab6"
+    },
+    "licenses/QWEN_APACHE_2_0.txt": {
+      "bytes": 11544,
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+    },
+    "package_cpu_validation.json": {
+      "bytes": 2821,
+      "sha256": "26d1923472f8328d63d3ea2b4eb4f9a386ffdee3ea4520fd173286dbea6d9588"
+    },
+    "package_gpu_validation.json": {
+      "bytes": 1686,
+      "sha256": "531855776a8d0d495936068df693aca45725d218bab385ac0a378c2dd7649686"
+    },
+    "public_runner_validation.json": {
+      "bytes": 1335,
+      "sha256": "e7fe27be8e1b739471fdbf7c1273416e528956602ad7c11ab9f1b95bfcd8b7af"
+    },
+    "pyproject.toml": {
+      "bytes": 869,
+      "sha256": "a5cc0e1ffdb2c9bc40c7fa21f591efa5a190c019f7d98f6d221678c128d1ea44"
+    },
+    "requirements-tested.txt": {
+      "bytes": 495,
+      "sha256": "6050173ebef628b85e563ff686432c96f74911834b1c9b54ad7cb11f4c85a268"
+    },
+    "results/benchmark_comparison.csv": {
+      "bytes": 11065,
+      "sha256": "490f8cf81ec4714260742db3892d45e046221d80a613176b1f94b9667d5c4260"
+    },
+    "results/benchmark_comparison.json": {
+      "bytes": 36875,
+      "sha256": "785d2c9907d7d07ec3f63ab98276bca58a3ac26de2061c5a3e00dc026ce2291e"
+    },
+    "results/jevbench.json": {
+      "bytes": 54963,
+      "sha256": "2789aa5fe9ff61dbe255e33770d1838374d801ca1ea7958667445216532bbbf6"
+    },
+    "results/jf100.json": {
+      "bytes": 15812,
+      "sha256": "cc1aa5865f5d934b5cbd34321c71aefcf8d2f89c6f7b00803689c46f752a7b9b"
+    },
+    "results/latency.json": {
+      "bytes": 13458,
+      "sha256": "4e3518cc3cddc41163395387c0acc608adb6aa187bc4be681c9e8126a8a82d86"
+    },
+    "results/latency_zero_shot.json": {
+      "bytes": 12119,
+      "sha256": "01b0dfaccc109fb40023a3c84233536fa18d3205522c39cb46efdd285a137e98"
+    },
+    "results/mmlu_pro.json": {
+      "bytes": 5394,
+      "sha256": "6385df7e386755361dcb630107ec11d02882f5539a95863590e794e06f3abd1a"
+    },
+    "results/openjev_pilot.json": {
+      "bytes": 36465,
+      "sha256": "6b0ea70096948669edcda9bc87ab41d2377d620bfed37a0e96d2428b8d59b400"
+    },
+    "results/openjev_public_ood.json": {
+      "bytes": 39827,
+      "sha256": "bc8c001243845036cc36838d67696b147d4f61f093c178a87127977a5e123294"
+    },
+    "results/openjev_public_test.json": {
+      "bytes": 43238,
+      "sha256": "4ffa21889606e82e516e00855dc0465b080f8cdb022ea6d567370d5e3e82023d"
+    },
+    "results/openjev_reasoning_controls.json": {
+      "bytes": 28199,
+      "sha256": "cfca6ce099bd5901934ae6f5a993c2ae2c52d8e50d7deadbaab24fbbb82b1e22"
+    },
+    "results/training_input_screen.json": {
+      "bytes": 6188,
+      "sha256": "aa032702ac403ac9435cfee42ff43a0d6bc8228ee23fc48de950ef6ae0242b4f"
+    },
+    "src/canopy_jev/__init__.py": {
+      "bytes": 181,
+      "sha256": "09b331b85db00b8d81011cab4c1f393de9c64045a13009f2ed3f5a362254d474"
+    },
+    "src/canopy_jev/artifacts.py": {
+      "bytes": 3547,
+      "sha256": "ba70836e01cfef873245f1ba8155b307e467e33061a82662dbcdff873c400a56"
+    },
+    "src/canopy_jev/cli.py": {
+      "bytes": 3138,
+      "sha256": "65f993d52ad51407103bac6c3ba5c5bf9f8e379347ce9928434ee11e38d9b0a6"
+    },
+    "src/canopy_jev/model.py": {
+      "bytes": 12882,
+      "sha256": "4eb84c86b22b37b047318beff25aec9efb1da3a80bb0f70202e91cc21453d806"
+    },
+    "src/canopy_jev/policy.py": {
+      "bytes": 1072,
+      "sha256": "6205928f4cdd2c51b70263582e4682c0f29ce55bc59bf893171be2f6a074882b"
+    },
+    "src/canopy_jev/prompt.py": {
+      "bytes": 8652,
+      "sha256": "69e27611835517daed98c5426705155e69eedf5506cbe6a19e55ad930135e7f8"
+    },
+    "src/canopy_jev/runtime_pin.py": {
+      "bytes": 10499,
+      "sha256": "9c88c94af27101a2716dc8b281cb689b5b536be7ab3f515b95473f723c7d6382"
+    },
+    "src/canopy_jev/stem.py": {
+      "bytes": 2812,
+      "sha256": "3a86fcdef47cd4bb5c03131e80609e68663af761019bf37580dc69ccaa44cd8d"
+    },
+    "src/canopy_jev/tail.py": {
+      "bytes": 9399,
+      "sha256": "6d544ebe59e14d9779a7a18d5cb91b4c92cc739247bdfc77cd1c11554430e74a"
+    },
+    "src/canopy_jev/tree.py": {
+      "bytes": 1054,
+      "sha256": "b60ff9f8c24e8d76e9730cc6807c9ce2960a2988994d0c930206fdce64f835eb"
+    },
+    "tests/test_cpu.py": {
+      "bytes": 8908,
+      "sha256": "6e8812d9584b460605faf5d832f6d4d6fd3027894a799e084c1e9451386c114f"
+    },
+    "tools/PUBLIC_EVALUATION.txt": {
+      "bytes": 3523,
+      "sha256": "1f1b0218a2eb7b5a51faa4de3ee270bda4235dfbffc78cf412cb3348753584cc"
+    },
+    "tools/evaluate_public.py": {
+      "bytes": 16122,
+      "sha256": "53399268b5e9184e6f32cce840030adc0b0dd65227fb17a1707d5179734d152b"
+    },
+    "tools/export_artifacts.py": {
+      "bytes": 5928,
+      "sha256": "f8d0ec67662292148099dae935f53f9b2c7862f03cf84bfbd4500dc5e149a836"
+    },
+    "tools/fetch_evaluation_demos.py": {
+      "bytes": 2766,
+      "sha256": "dc5d8e06fc6ce4950c29c8103f69405b0fb6d007659319cce415d7ea72fab012"
+    },
+    "tools/plot_benchmark_comparison.py": {
+      "bytes": 6410,
+      "sha256": "cc272a0e8e43f15a44f0def8fb2ad16e0606badc360fdfa17501ecb0003c3070"
+    },
+    "tools/prepare_openjev_data.py": {
+      "bytes": 13891,
+      "sha256": "15dc4cc6e596894740e4d541546f001003396e5e534a8c7c07923eed29d614c1"
+    },
+    "tools/score_public.py": {
+      "bytes": 18458,
+      "sha256": "7b4b90b1ebd5e6038db8ce9fb3c3b618949f2910e5412521dd166d37d1e51805"
+    },
+    "tools/test_public.py": {
+      "bytes": 11127,
+      "sha256": "4633c05e103f8d0dd9a9cb6b36d2f06e69a01517383dfc75fde2a54e7a4f6237"
+    },
+    "tools/validate_clean_environment.py": {
+      "bytes": 3337,
+      "sha256": "c1f098b2edd94416adefc3d3ffe610fc9763cf6efa3d577ad3385252b7818fe2"
+    },
+    "tools/validate_gpu_parity.py": {
+      "bytes": 4985,
+      "sha256": "841cba4910f682c0a46f02175c83459d23b2194737ff59d1b1281ac44cce5cef"
+    }
+  },
+  "external_artifacts": {
+    "adapter.safetensors": {
+      "bytes": 25039208,
+      "sha256": "5026a53e56da0d5b597b4f9e09f057fc373c7f24aa054f9ac6569c7130063377"
+    },
+    "prior.safetensors": {
+      "bytes": 205188,
+      "sha256": "686a7305719a868cedd967a11b8bfd947291fd09ad86ee60fc75b58724846d67"
+    }
+  },
+  "scope": "Original source and documentation, aggregate evaluations, compact percentage-only benchmark figure; safe-tensor inference weights are distributed on Hugging Face."
+}

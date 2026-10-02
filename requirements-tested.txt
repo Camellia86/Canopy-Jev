@@ -1,0 +1,13 @@
+# Tested Linux NVIDIA/CUDA 12.4 environment; not a portable GPU wheel resolver.
+# Install the appropriate PyTorch CUDA wheel before these exact package versions.
+# Runtime kernel-source hashes are checked separately and may reject a different
+# build carrying the same version. CPU-only import/doctor does not load the model.
+torch==2.6.0
+transformers==5.8.0
+tokenizers==0.22.2
+triton==3.2.0
+fla-core==0.5.2
+flash-linear-attention==0.5.2
+safetensors==0.5.3
+huggingface-hub==1.33.0
+numpy==1.26.4

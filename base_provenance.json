@@ -1,0 +1,31 @@
+{
+  "repo_id": "Qwen/Qwen3.8-27B",
+  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "model_type": "qwen3_5",
+  "model_name_is_verified_not_inferred_from_architecture": true,
+  "base_license": "Apache-2.0",
+  "code_license_requested": "MIT",
+  "base_weights_not_bundled": true,
+  "checked_files": {
+    "config.json": {
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/config.json",
+      "sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab",
+      "exact_match_to_training_backbone": true
+    },
+    "model.safetensors.index.json": {
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/model.safetensors.index.json",
+      "sha256": "77042094076611b69791a610065f28b7013b8c621795fa86ddccc8bac7d1b9df",
+      "exact_match_to_training_backbone": true
+    },
+    "LICENSE": {
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/LICENSE",
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "exact_match_to_training_backbone": true
+    },
+    "README.md": {
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B/resolve/1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0/README.md",
+      "sha256": "57e4bdb258ee1a7d2635c5174ebd4e56abe392505cdb5f8bbb356b0dc4293641",
+      "exact_match_to_training_backbone": true
+    }
+  }
+}

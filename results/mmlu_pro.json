@@ -1,0 +1,209 @@
+{
+  "schema": 1,
+  "passed": true,
+  "model": "Canopy-Jev-27B",
+  "checkpoint_sha256": "506410609a6ba6eb422182fddda095b81fa4923011ceaa3717e85a74817237f4",
+  "step": 1200,
+  "overall": {
+    "brier": 0.47982269870808575,
+    "correct": 7761,
+    "n": 12032,
+    "nll": 1.1082596956689639,
+    "pass_at_1": 0.645029920212766,
+    "wilson95": [
+      0.636434892759697,
+      0.6535323697653745
+    ]
+  },
+  "per_category": {
+    "biology": {
+      "brier": 0.22218210137605685,
+      "correct": 620,
+      "n": 717,
+      "nll": 0.550410211099268,
+      "pass_at_1": 0.8647140864714087,
+      "wilson95": [
+        0.8377265403046881,
+        0.8878144140899644
+      ]
+    },
+    "business": {
+      "brier": 0.5839560469775159,
+      "correct": 436,
+      "n": 789,
+      "nll": 1.353133470824627,
+      "pass_at_1": 0.5525982256020279,
+      "wilson95": [
+        0.5177318888652578,
+        0.5869548666980269
+      ]
+    },
+    "chemistry": {
+      "brier": 0.6377497418663793,
+      "correct": 567,
+      "n": 1132,
+      "nll": 1.4830328079780593,
+      "pass_at_1": 0.5008833922261484,
+      "wilson95": [
+        0.4718028043234669,
+        0.5299580047969156
+      ]
+    },
+    "computer science": {
+      "brier": 0.41466535101081065,
+      "correct": 291,
+      "n": 410,
+      "nll": 0.9411836839507013,
+      "pass_at_1": 0.7097560975609756,
+      "wilson95": [
+        0.6640369588181071,
+        0.7515811392094344
+      ]
+    },
+    "economics": {
+      "brier": 0.28746806440054407,
+      "correct": 659,
+      "n": 844,
+      "nll": 0.6479893677719898,
+      "pass_at_1": 0.7808056872037915,
+      "wilson95": [
+        0.7516574413471584,
+        0.8074093453364166
+      ]
+    },
+    "engineering": {
+      "brier": 0.5499228059776554,
+      "correct": 574,
+      "n": 969,
+      "nll": 1.2596654052965757,
+      "pass_at_1": 0.5923632610939112,
+      "wilson95": [
+        0.5611177803488671,
+        0.6228793122678363
+      ]
+    },
+    "health": {
+      "brier": 0.3766337415595126,
+      "correct": 611,
+      "n": 818,
+      "nll": 0.87301032551199,
+      "pass_at_1": 0.7469437652811736,
+      "wilson95": [
+        0.7160431437994408,
+        0.7755358531761096
+      ]
+    },
+    "history": {
+      "brier": 0.40943706880939756,
+      "correct": 270,
+      "n": 381,
+      "nll": 0.9113417695974173,
+      "pass_at_1": 0.7086614173228346,
+      "wilson95": [
+        0.6611339850065825,
+        0.7520231641405979
+      ]
+    },
+    "law": {
+      "brier": 0.5493521940952926,
+      "correct": 665,
+      "n": 1101,
+      "nll": 1.2244805285003373,
+      "pass_at_1": 0.6039963669391463,
+      "wilson95": [
+        0.5747945303633084,
+        0.632475026885597
+      ]
+    },
+    "math": {
+      "brier": 0.5725732976133731,
+      "correct": 741,
+      "n": 1351,
+      "nll": 1.339443518568342,
+      "pass_at_1": 0.5484826054774241,
+      "wilson95": [
+        0.5218462081411225,
+        0.5748440718522484
+      ]
+    },
+    "other": {
+      "brier": 0.4553957268451789,
+      "correct": 615,
+      "n": 924,
+      "nll": 1.0542173689523369,
+      "pass_at_1": 0.6655844155844156,
+      "wilson95": [
+        0.6345343183870973,
+        0.6952634041558601
+      ]
+    },
+    "philosophy": {
+      "brier": 0.4412733202279747,
+      "correct": 351,
+      "n": 499,
+      "nll": 0.9862980118718346,
+      "pass_at_1": 0.7034068136272545,
+      "wilson95": [
+        0.6619002759703324,
+        0.7418054973684306
+      ]
+    },
+    "physics": {
+      "brier": 0.6102290614112711,
+      "correct": 710,
+      "n": 1299,
+      "nll": 1.442237801020179,
+      "pass_at_1": 0.5465742879137798,
+      "wilson95": [
+        0.5194045018108565,
+        0.5734694232402596
+      ]
+    },
+    "psychology": {
+      "brier": 0.2626607422200787,
+      "correct": 651,
+      "n": 798,
+      "nll": 0.6031398483157033,
+      "pass_at_1": 0.8157894736842105,
+      "wilson95": [
+        0.7874021549618471,
+        0.8411510265377182
+      ]
+    }
+  },
+  "paired_vs_same_runtime_origin": {
+    "accuracy_delta": 0.0008311170212765958,
+    "accuracy_delta_ci95": [
+      -0.0010804521276595745,
+      0.002742686170212766
+    ],
+    "both_correct": 7685,
+    "both_wrong": 4205,
+    "brier_delta": 0.008511699580340554,
+    "corrections": 76,
+    "model_correct": 7761,
+    "n": 12032,
+    "net_correct_gain": 10,
+    "nll_delta": 0.022460119403514306,
+    "origin_correct": 7751,
+    "prediction_disagreements": 264,
+    "regressions": 66
+  },
+  "posthoc_report_endpoint": true,
+  "native_direct_letter_readout": {
+    "model": "original frozen Qwen3.8-27B native lm_head letter rows",
+    "protocol": "five official category demos, no target CoT or generated answer; same v4 cached original64 input execution domain, argmax native logits",
+    "n": 12032,
+    "correct": 7539,
+    "accuracy": 0.6265791223404256,
+    "native_generative_thinking_measured": false
+  },
+  "independent_audit_sha256": "9315ed0b7de9f90f7a6551e5b6e707f906e753e51b776e7c431d76644f183dc4",
+  "original_dev_selection_unchanged": true,
+  "no_automatic_deployment": true,
+  "limitations": [
+    "Endpoint chosen for reporting after inspecting all13 full-Pro endpoints; not blind development selection",
+    "Historical cached tree numerical domain and five official category demos; not arbitrary fresh API",
+    "Only3questions more correct than same-step CE; stable RL benefit is not established"
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "schema": 1,
+  "model": "Canopy-Jev 27B",
+  "checkpoint_sha256": "506410609a6ba6eb422182fddda095b81fa4923011ceaa3717e85a74817237f4",
+  "benchmark": "JF100, all100 items and three option rotations",
+  "complete": true,
+  "suite": "jf100",
+  "overall": {
+    "planned_rows": 300,
+    "valid_probability_rows": 300,
+    "probability_coverage": 1.0,
+    "status_counts": {
+      "ok": 300
+    },
+    "hard_rows": 300,
+    "soft_rows": 0,
+    "hard_correct": 216,
+    "hard_accuracy_all_planned": 0.72,
+    "valid_hard_rows": 300,
+    "valid_soft_rows": 0,
+    "hard_accuracy_valid_only": 0.72,
+    "positive_set_correct": 216,
+    "positive_set_accuracy_all_planned": 0.72,
+    "expected_accuracy_all_planned": 0.72,
+    "valid_probability_metrics": {
+      "nll": 0.7039361354226723,
+      "brier_vs_target_distribution": 0.37247293259523445,
+      "expected_brier": 0.37247293259523445,
+      "rows": 300,
+      "score_expected_absolute_error": null,
+      "score_rows": 0
+    },
+    "group_macro": {
+      "groups": 50,
+      "hard_groups": 50,
+      "soft_only_groups_excluded_from_hard": 0,
+      "hard_accuracy": 0.72,
+      "positive_set_accuracy": 0.72
+    }
+  },
+  "per_domain": {
+    "algorithms": {
+      "planned_rows": 30,
+      "valid_probability_rows": 30,
+      "probability_coverage": 1.0,
+      "status_counts": {
+        "ok": 30
+      },
+      "hard_rows": 30,
+      "soft_rows": 0,
+      "hard_correct": 13,
+      "hard_accuracy_all_planned": 0.43333333333333335,
+      "valid_hard_rows": 30,
+      "valid_soft_rows": 0,
+      "hard_accuracy_valid_only": 0.43333333333333335,
+      "positive_set_correct": 13,
+      "positive_set_accuracy_all_planned": 0.43333333333333335,
+      "expected_accuracy_all_planned": 0.43333333333333335,
+      "valid_probability_metrics": {
+        "nll": 1.3764978656987121,
+        "brier_vs_target_distribution": 0.7508685839824106,
+        "expected_brier": 0.7508685839824106,
+        "rows": 30,
+        "score_expected_absolute_error": null,
+        "score_rows": 0
+      },
+      "group_macro": {
+        "groups": 5,
+        "hard_groups": 5,
+        "soft_only_groups_excluded_from_hard": 0,
+        "hard_accuracy": 0.4333333333333333,
+        "positive_set_accuracy": 0.4333333333333333
+      }
+    },
+    "code_semantics": {
+      "planned_rows": 30,
+      "valid_probability_rows": 30,
+      "probability_coverage": 1.0,
+      "status_counts": {
+        "ok": 30
+      },
+      "hard_rows": 30,
+      "soft_rows": 0,
+      "hard_correct": 28,
+      "hard_accuracy_all_planned": 0.9333333333333333,
+      "valid_hard_rows": 30,
+      "valid_soft_rows": 0,
+      "hard_accuracy_valid_only": 0.9333333333333333,
+      "positive_set_correct": 28,
+      "positive_set_accuracy_all_planned": 0.9333333333333333,
+      "expected_accuracy_all_planned": 0.9333333333333333,
+      "valid_probability_metrics": {
+        "nll": 0.2887908958136135,
+        "brier_vs_target_distribution": 0.12253066132309211,
+        "expected_brier": 0.12253066132309211,
+        "rows": 30,
+        "score_expected_absolute_error": null,
+        "score_rows": 0
+      },
+      "group_macro": {
+        "groups": 5,
+        "hard_groups": 5,
+        "soft_only_groups_excluded_from_hard": 0,
+        "hard_accuracy": 0.9333333333333332,
+        "positive_set_accuracy": 0.9333333333333332
+      }
+    },
+    "customer_service": {
+      "planned_rows": 30,
+      "valid_probability_rows": 30,
+      "probability_coverage": 1.0,
+      "status_counts": {
+        "ok": 30
+      },
+      "hard_rows": 30,
+      "soft_rows": 0,
+      "hard_correct": 27,
+      "hard_accuracy_all_planned": 0.9,
+      "valid_hard_rows": 30,
+      "valid_soft_rows": 0,
+      "hard_accuracy_valid_only": 0.9,
+      "positive_set_correct": 27,
+      "positive_set_accuracy_all_planned": 0.9,
+      "expected_accuracy_all_planned": 0.9,
+      "valid_probability_metrics": {
+        "nll": 0.2497616000280628,
+        "brier_vs_target_distribution": 0.12376274681482673,
+        "expected_brier": 0.12376274681482674,
+        "rows": 30,
+        "score_expected_absolute_error": null,
+        "score_rows": 0
+      },
+      "group_macro": {
+        "groups": 5,
+        "hard_groups": 5,
+        "soft_only_groups_excluded_from_hard": 0,
+        "hard_accuracy": 0.9,
+        "positive_set_accuracy": 0.9
+      }
+    },
+    "discourse": {
+      "planned_rows": 30,
+      "valid_probability_rows": 30,
+      "probability_coverage": 1.0,
+      "status_counts": {
+        "ok": 30
+      },
+      "hard_rows": 30,
+      "soft_rows": 0,
+      "hard_correct": 30,
+      "hard_accuracy_all_planned": 1.0,
+      "valid_hard_rows": 30,
+      "valid_soft_rows": 0,
+      "hard_accuracy_valid_only": 1.0,
+      "positive_set_correct": 30,
+      "positive_set_accuracy_all_planned": 1.0,
+      "expected_accuracy_all_planned": 1.0,
+      "valid_probability_metrics": {
+        "nll": 0.19106922192510803,
+        "brier_vs_target_distribution": 0.06455005325042604,
+        "expected_brier": 0.06455005325042601,
+        "rows": 30,
+        "score_expected_absolute_error": null,
+        "score_rows": 0
+      },
+      "group_macro": {
+        "groups": 5,
+        "hard_groups": 5,
+        "soft_only_groups_excluded_from_hard": 0,
+        "hard_accuracy": 1.0,
+        "positive_set_accuracy": 1.0
+      }
+    },
+    "evidence_integration": {
+      "planned_rows": 30,
+      "valid_probability_rows": 30,
+      "probability_coverage": 1.0,
+      "status_counts": {
+        "ok": 30
+      },
+      "hard_rows": 30,
+      "soft_rows": 0,
+      "hard_correct": 20,
+      "hard_accuracy_all_planned": 0.6666666666666666,
+      "valid_hard_rows": 30,
+      "valid_soft_rows": 0,
+      "hard_accuracy_valid_only": 0.6666666666666666,
+      "positive_set_correct": 20,
+      "positive_set_accuracy_all_planned": 0.6666666666666666,
+      "expected_accuracy_all_planned": 0.6666666666666666,
+      "valid_probability_metrics": {
+        "nll": 0.7107659936975066,
+        "brier_vs_target_distribution": 0.39584507309615824,
+        "expected_brier": 0.39584507309615835,
+        "rows": 30,
+        "score_expected_absolute_error": null,
+        "score_rows": 0
+      },
+      "group_macro": {
+        "groups": 5,
+        "hard_groups": 5,
+        "soft_only_groups_excluded_from_hard": 0,
+        "hard_accuracy": 0.6666666666666667,
+        "positive_set_accuracy": 0.6666666666666667
+      }
+    },
+    "formal_logic": {
+      "planned_rows": 30,
+      "valid_probability_rows": 30,
+      "probability_coverage": 1.0,
+      "status_counts": {
+        "ok": 30
+      },
+      "hard_rows": 30,
+      "soft_rows": 0,
+      "hard_correct": 23,
+      "hard_accuracy_all_planned": 0.7666666666666667,
+      "valid_hard_rows": 30,
+      "valid_soft_rows": 0,
+      "hard_accuracy_valid_only": 0.7666666666666667,
+      "positive_set_correct": 23,
+      "positive_set_accuracy_all_planned": 0.7666666666666667,
+      "expected_accuracy_all_planned": 0.7666666666666667,
+      "valid_probability_metrics": {
+        "nll": 0.6323264725138414,
+        "brier_vs_target_distribution": 0.3260004940153598,
+        "expected_brier": 0.32600049401535963,
+        "rows": 30,
+        "score_expected_absolute_error": null,
+        "score_rows": 0
+      },
+      "group_macro": {
+        "groups": 5,
+        "hard_groups": 5,
+        "soft_only_groups_excluded_from_hard": 0,
+        "hard_accuracy": 0.7666666666666667,
+        "positive_set_accuracy": 0.7666666666666667
+      }
+    },
+    "mathematics": {
+      "planned_rows": 30,
+      "valid_probability_rows": 30,
+      "probability_coverage": 1.0,
+      "status_counts": {
+        "ok": 30
+      },
+      "hard_rows": 30,
+      "soft_rows": 0,
+      "hard_correct": 15,
+      "hard_accuracy_all_planned": 0.5,
+      "valid_hard_rows": 30,
+      "valid_soft_rows": 0,
+      "hard_accuracy_valid_only": 0.5,
+      "positive_set_correct": 15,
+      "positive_set_accuracy_all_planned": 0.5,
+      "expected_accuracy_all_planned": 0.5,
+      "valid_probability_metrics": {
+        "nll": 1.0682031010344004,
+        "brier_vs_target_distribution": 0.5968583261138735,
+        "expected_brier": 0.5968583261138735,
+        "rows": 30,
+        "score_expected_absolute_error": null,
+        "score_rows": 0
+      },
+      "group_macro": {
+        "groups": 5,
+        "hard_groups": 5,
+        "soft_only_groups_excluded_from_hard": 0,
+        "hard_accuracy": 0.5,
+        "positive_set_accuracy": 0.5
+      }
+    },
+    "policy_rules": {
+      "planned_rows": 30,
+      "valid_probability_rows": 30,
+      "probability_coverage": 1.0,
+      "status_counts": {
+        "ok": 30
+      },
+      "hard_rows": 30,
+      "soft_rows": 0,
+      "hard_correct": 30,
+      "hard_accuracy_all_planned": 1.0,
+      "valid_hard_rows": 30,
+      "valid_soft_rows": 0,
+      "hard_accuracy_valid_only": 1.0,
+      "positive_set_correct": 30,
+      "positive_set_accuracy_all_planned": 1.0,
+      "expected_accuracy_all_planned": 1.0,
+      "valid_probability_metrics": {
+        "nll": 0.2684921624757119,
+        "brier_vs_target_distribution": 0.09856888986958282,
+        "expected_brier": 0.09856888986958277,
+        "rows": 30,
+        "score_expected_absolute_error": null,
+        "score_rows": 0
+      },
+      "group_macro": {
+        "groups": 5,
+        "hard_groups": 5,
+        "soft_only_groups_excluded_from_hard": 0,
+        "hard_accuracy": 1.0,
+        "positive_set_accuracy": 1.0
+      }
+    },
+    "relations": {
+      "planned_rows": 30,
+      "valid_probability_rows": 30,
+      "probability_coverage": 1.0,
+      "status_counts": {
+        "ok": 30
+      },
+      "hard_rows": 30,
+      "soft_rows": 0,
+      "hard_correct": 14,
+      "hard_accuracy_all_planned": 0.4666666666666667,
+      "valid_hard_rows": 30,
+      "valid_soft_rows": 0,
+      "hard_accuracy_valid_only": 0.4666666666666667,
+      "positive_set_correct": 14,
+      "positive_set_accuracy_all_planned": 0.4666666666666667,
+      "expected_accuracy_all_planned": 0.4666666666666667,
+      "valid_probability_metrics": {
+        "nll": 1.2134057056646192,
+        "brier_vs_target_distribution": 0.6523161958381738,
+        "expected_brier": 0.6523161958381738,
+        "rows": 30,
+        "score_expected_absolute_error": null,
+        "score_rows": 0
+      },
+      "group_macro": {
+        "groups": 5,
+        "hard_groups": 5,
+        "soft_only_groups_excluded_from_hard": 0,
+        "hard_accuracy": 0.4666666666666667,
+        "positive_set_accuracy": 0.4666666666666667
+      }
+    },
+    "temporal": {
+      "planned_rows": 30,
+      "valid_probability_rows": 30,
+      "probability_coverage": 1.0,
+      "status_counts": {
+        "ok": 30
+      },
+      "hard_rows": 30,
+      "soft_rows": 0,
+      "hard_correct": 16,
+      "hard_accuracy_all_planned": 0.5333333333333333,
+      "valid_hard_rows": 30,
+      "valid_soft_rows": 0,
+      "hard_accuracy_valid_only": 0.5333333333333333,
+      "positive_set_correct": 16,
+      "positive_set_accuracy_all_planned": 0.5333333333333333,
+      "expected_accuracy_all_planned": 0.5333333333333333,
+      "valid_probability_metrics": {
+        "nll": 1.0400483353751484,
+        "brier_vs_target_distribution": 0.5934283016484427,
+        "expected_brier": 0.5934283016484427,
+        "rows": 30,
+        "score_expected_absolute_error": null,
+        "score_rows": 0
+      },
+      "group_macro": {
+        "groups": 5,
+        "hard_groups": 5,
+        "soft_only_groups_excluded_from_hard": 0,
+        "hard_accuracy": 0.5333333333333333,
+        "positive_set_accuracy": 0.5333333333333333
+      }
+    }
+  },
+  "per_type": {
+    "choice": {
+      "planned_rows": 300,
+      "valid_probability_rows": 300,
+      "probability_coverage": 1.0,
+      "status_counts": {
+        "ok": 300
+      },
+      "hard_rows": 300,
+      "soft_rows": 0,
+      "hard_correct": 216,
+      "hard_accuracy_all_planned": 0.72,
+      "valid_hard_rows": 300,
+      "valid_soft_rows": 0,
+      "hard_accuracy_valid_only": 0.72,
+      "positive_set_correct": 216,
+      "positive_set_accuracy_all_planned": 0.72,
+      "expected_accuracy_all_planned": 0.72,
+      "valid_probability_metrics": {
+        "nll": 0.7039361354226723,
+        "brier_vs_target_distribution": 0.37247293259523445,
+        "expected_brier": 0.37247293259523445,
+        "rows": 300,
+        "score_expected_absolute_error": null,
+        "score_rows": 0
+      },
+      "group_macro": {
+        "groups": 50,
+        "hard_groups": 50,
+        "soft_only_groups_excluded_from_hard": 0,
+        "hard_accuracy": 0.72,
+        "positive_set_accuracy": 0.72
+      }
+    }
+  },
+  "jf100": {
+    "items": 100,
+    "pairs": 50,
+    "rotations": 300,
+    "all_three_correct_items": 59,
+    "all_three_correct_rate": 0.59,
+    "semantic_consistency_items": 65,
+    "semantic_consistency_all_items": 0.65,
+    "consistency_eligible_items": 100,
+    "semantic_consistency_valid_only": 0.65,
+    "pair_joint_correct_rotations": 89,
+    "pair_joint_accuracy": 0.5933333333333334,
+    "pairs_all_six_correct": 23,
+    "pair_all_six_accuracy": 0.46,
+    "accuracy_descriptive_ci95": [
+      0.6566666666666666,
+      0.7766666666666668
+    ],
+    "bootstrap": {
+      "seed": 92026,
+      "draws": 5000,
+      "unit": "counterfactual pair",
+      "stratified_by": "domain"
+    },
+    "published_comparison": {
+      "historical_100_step_pilot_correct_of_300": {
+        "2b": 148,
+        "9b": 187,
+        "27b": 196
+      },
+      "released_final_Open27_v1_1": "not evaluated; never replace with pilot scores",
+      "paired_difference_CI": "not computed without competitor paired predictions"
+    }
+  },
+  "metric_definitions": {
+    "failure_policy": "Every unsupported/overlength failure counts incorrect in all-planned hard/positive-set/expected accuracy.",
+    "hard": "Exact one-hot targets only; soft targets never hardened.",
+    "probability_metrics": "Successful valid rows only with explicit coverage; no probability invented for failures.",
+    "group_macro": "Equal weight per(source,group_id); soft-only groups excluded from hard group accuracy and counted.",
+    "tie": "First offered candidate; matches native numpy.argmax.",
+    "expected_accuracy": "Target mass at selected candidate; zero for explicit failure.",
+    "score_expected_absolute_error": "Target-distribution expectation of absolute error of predicted expected ordinal level."
+  },
+  "limitations": [
+    "Correlated generated views, overlapping source families and one model checkpoint limit generalization claims.",
+    "Frozen/no-training assertions rely on locked executed source and completed receipts; no live GPU state was independently inspected.",
+    "JF100 comparison is to historical pilots, not finalOpen27v1.1."
+  ],
+  "protocol": {
+    "zero_shot": true,
+    "max_input_tokens": 16384,
+    "candidate_limit": 10,
+    "generated_tokens": 0,
+    "temperature": 1.1422139406204224,
+    "exploration": 0.01,
+    "failed_predictions_count_in_planned_accuracy": true,
+    "competitors_rerun": false
+  },
+  "audit": {
+    "passed": true,
+    "source_audit_sha256": "20cb5c304c79b4debc93330cec48e461d8edeb12a19945e30510f2abdf8f89c0",
+    "auditor_sha256": "9d48a65276092badafec7b77a504850d9ad535d2a4e19c9d27b1321287a61ac5",
+    "prepared_manifest_sha256": "a91b8d2cbbb719d3994c9b35b3e3efc8c8654595d354cd08b8db4088cfa5620e",
+    "complete_outputs_verified_before_reference_scoring": true,
+    "original_input_conversion_verified": true,
+    "independent_prompt_pack_replay": true,
+    "first_batch_probability_bytes_verified": true
+  },
+  "public_sources": {
+    "dataset": "https://github.com/softpudding/jev-frontier-100/tree/9abacec47394f3b393f81fbe3cdd524f028bc088",
+    "pilot_results": "https://github.com/Zefan-Cai/Open-Jev/tree/b718c4beaaf13af7d37504a23e99ef599e216e67/reports/pilot-frontier-n1-16k"
+  }
+}

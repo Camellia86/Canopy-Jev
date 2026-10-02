@@ -1,0 +1,40 @@
+{
+  "CPU_only": true,
+  "GPU_parity_status": "PASS; see package_gpu_validation.json for actual same-token full-model smoke",
+  "artifact_manifest_sha256": "0d03c9b4d7aa7c518843e043225503cfd03d701c2e4106fe3f340f56874fcdfc",
+  "artifact_total_bytes": 25244396,
+  "isolated_wheel_install_import_passed": true,
+  "limitations": [
+    "The wheel itself excludes base weights and the separately distributed inference artifacts.",
+    "GPU inference requires Linux NVIDIA/CUDA and at least 64 GiB free GPU memory before load.",
+    "Only the tested numerical-library source builds are accepted; a matching version number alone does not establish source compatibility.",
+    "The default zero-shot prompt is different from the legacy five-demonstration evaluation protocol."
+  ],
+  "real_tokenizer_check": true,
+  "safe_tensor_FP32_roundtrip": true,
+  "schema": 1,
+  "source_checkpoint_sha256": "506410609a6ba6eb422182fddda095b81fa4923011ceaa3717e85a74817237f4",
+  "source_prior_sha256": "4620b120f1887a2240dc0cc748de9631b701e8db16a200450d3b41b4e25d6bee",
+  "source_sha256": {
+    "examples/client.py": "054433cd6ef4fe1b71036501b6dd735375f0aa4633a838d3335565f858ef507b",
+    "examples/request.json": "11b45fcfb4e06b8c7e44ac7879c6156d70d98c7a47c15ce4fb31a673ccd7eab6",
+    "src/canopy_jev/__init__.py": "09b331b85db00b8d81011cab4c1f393de9c64045a13009f2ed3f5a362254d474",
+    "src/canopy_jev/artifacts.py": "ba70836e01cfef873245f1ba8155b307e467e33061a82662dbcdff873c400a56",
+    "src/canopy_jev/cli.py": "65f993d52ad51407103bac6c3ba5c5bf9f8e379347ce9928434ee11e38d9b0a6",
+    "src/canopy_jev/model.py": "4eb84c86b22b37b047318beff25aec9efb1da3a80bb0f70202e91cc21453d806",
+    "src/canopy_jev/policy.py": "6205928f4cdd2c51b70263582e4682c0f29ce55bc59bf893171be2f6a074882b",
+    "src/canopy_jev/prompt.py": "69e27611835517daed98c5426705155e69eedf5506cbe6a19e55ad930135e7f8",
+    "src/canopy_jev/runtime_pin.py": "9c88c94af27101a2716dc8b281cb689b5b536be7ab3f515b95473f723c7d6382",
+    "src/canopy_jev/stem.py": "3a86fcdef47cd4bb5c03131e80609e68663af761019bf37580dc69ccaa44cd8d",
+    "src/canopy_jev/tail.py": "6d544ebe59e14d9779a7a18d5cb91b4c92cc739247bdfc77cd1c11554430e74a",
+    "src/canopy_jev/tree.py": "b60ff9f8c24e8d76e9730cc6807c9ce2960a2988994d0c930206fdce64f835eb",
+    "tests/test_cpu.py": "6e8812d9584b460605faf5d832f6d4d6fd3027894a799e084c1e9451386c114f",
+    "tools/export_artifacts.py": "f8d0ec67662292148099dae935f53f9b2c7862f03cf84bfbd4500dc5e149a836",
+    "tools/validate_gpu_parity.py": "841cba4910f682c0a46f02175c83459d23b2194737ff59d1b1281ac44cce5cef"
+  },
+  "tested_installed_library_sources_match": true,
+  "tests_failed": 0,
+  "tests_passed": 11,
+  "wheel_build_passed": true,
+  "clean_cuda_install_validation": "PASS with initial unexplained probability assertion preserved; see clean_install_validation.json"
+}

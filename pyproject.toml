@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "canopy-jev"
+version = "0.1.0"
+authors = [{name = "Ruoxi Qiu"}]
+description = "Frozen shared-state, multi-question numerical decision inference"
+requires-python = ">=3.10,<3.13"
+license = {text = "MIT"}
+dependencies = ["numpy==1.26.4", "safetensors==0.5.3", "huggingface-hub==1.33.0"]
+
+[project.optional-dependencies]
+cuda = ["torch==2.6.0", "transformers==5.8.0", "tokenizers==0.22.2", "triton==3.2.0", "fla-core==0.5.2", "flash-linear-attention==0.5.2"]
+
+[project.urls]
+Homepage = "https://github.com/Camellia86/Canopy-Jev"
+Models = "https://huggingface.co/Camellia86/Canopy-Jev-27B"
+
+[project.scripts]
+canopy-jev = "canopy_jev.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+"share/canopy-jev" = ["CITATION.cff"]

@@ -1,0 +1,1104 @@
+{
+  "schema": 1,
+  "model": "Canopy-Jev 27B",
+  "checkpoint_sha256": "506410609a6ba6eb422182fddda095b81fa4923011ceaa3717e85a74817237f4",
+  "complete": true,
+  "benchmark": "Exact historical Open-Jev pilot snapshots and bounded local games",
+  "snapshots": {
+    "workflow": {
+      "overall": {
+        "cases": 96,
+        "valid_cases": 96,
+        "failed_cases": 0,
+        "raw_exact": 53,
+        "gated_exact": 62,
+        "raw_exact_accuracy_all_planned": 0.5520833333333334,
+        "gated_exact_accuracy_all_planned": 0.6458333333333334,
+        "official_valid_response_metrics": {
+          "reference_kind": "synthetic_local_policy",
+          "predictor_kind": "learned",
+          "overall": {
+            "cases": 96,
+            "raw_exact": 53,
+            "gated_exact": 62,
+            "true_positive": 123,
+            "false_positive": 38,
+            "false_negative": 31,
+            "blocked_actions": 17,
+            "raw_exact_match": 0.5520833333333334,
+            "gated_exact_match": 0.6458333333333334,
+            "micro_f1": 0.780952380952381
+          },
+          "workflows": {
+            "customer_service": {
+              "cases": 24,
+              "raw_exact": 15,
+              "gated_exact": 15,
+              "true_positive": 44,
+              "false_positive": 5,
+              "false_negative": 10,
+              "blocked_actions": 5,
+              "raw_exact_match": 0.625,
+              "gated_exact_match": 0.625,
+              "micro_f1": 0.8543689320388349
+            },
+            "security_incidents": {
+              "cases": 24,
+              "raw_exact": 22,
+              "gated_exact": 22,
+              "true_positive": 22,
+              "false_positive": 2,
+              "false_negative": 2,
+              "blocked_actions": 1,
+              "raw_exact_match": 0.9166666666666666,
+              "gated_exact_match": 0.9166666666666666,
+              "micro_f1": 0.9166666666666666
+            },
+            "agent_trace_observability": {
+              "cases": 24,
+              "raw_exact": 6,
+              "gated_exact": 6,
+              "true_positive": 6,
+              "false_positive": 15,
+              "false_negative": 18,
+              "blocked_actions": 0,
+              "raw_exact_match": 0.25,
+              "gated_exact_match": 0.25,
+              "micro_f1": 0.26666666666666666
+            },
+            "invoice_processing": {
+              "cases": 24,
+              "raw_exact": 10,
+              "gated_exact": 19,
+              "true_positive": 51,
+              "false_positive": 16,
+              "false_negative": 1,
+              "blocked_actions": 11,
+              "raw_exact_match": 0.4166666666666667,
+              "gated_exact_match": 0.7916666666666666,
+              "micro_f1": 0.8571428571428571
+            }
+          }
+        },
+        "failure_policy": "Failed cases receive zero raw/gated exact-match credit; official valid-only micro-F1 remains conditional"
+      },
+      "by_split": {
+        "test": {
+          "cases": 48,
+          "valid_cases": 48,
+          "failed_cases": 0,
+          "raw_exact": 24,
+          "gated_exact": 30,
+          "raw_exact_accuracy_all_planned": 0.5,
+          "gated_exact_accuracy_all_planned": 0.625,
+          "official_valid_response_metrics": {
+            "reference_kind": "synthetic_local_policy",
+            "predictor_kind": "learned",
+            "overall": {
+              "cases": 48,
+              "raw_exact": 24,
+              "gated_exact": 30,
+              "true_positive": 60,
+              "false_positive": 20,
+              "false_negative": 15,
+              "blocked_actions": 10,
+              "raw_exact_match": 0.5,
+              "gated_exact_match": 0.625,
+              "micro_f1": 0.7741935483870968
+            },
+            "workflows": {
+              "customer_service": {
+                "cases": 12,
+                "raw_exact": 7,
+                "gated_exact": 7,
+                "true_positive": 20,
+                "false_positive": 2,
+                "false_negative": 5,
+                "blocked_actions": 2,
+                "raw_exact_match": 0.5833333333333334,
+                "gated_exact_match": 0.5833333333333334,
+                "micro_f1": 0.851063829787234
+              },
+              "security_incidents": {
+                "cases": 12,
+                "raw_exact": 11,
+                "gated_exact": 11,
+                "true_positive": 11,
+                "false_positive": 1,
+                "false_negative": 1,
+                "blocked_actions": 0,
+                "raw_exact_match": 0.9166666666666666,
+                "gated_exact_match": 0.9166666666666666,
+                "micro_f1": 0.9166666666666666
+              },
+              "agent_trace_observability": {
+                "cases": 12,
+                "raw_exact": 3,
+                "gated_exact": 3,
+                "true_positive": 3,
+                "false_positive": 6,
+                "false_negative": 9,
+                "blocked_actions": 0,
+                "raw_exact_match": 0.25,
+                "gated_exact_match": 0.25,
+                "micro_f1": 0.2857142857142857
+              },
+              "invoice_processing": {
+                "cases": 12,
+                "raw_exact": 3,
+                "gated_exact": 9,
+                "true_positive": 26,
+                "false_positive": 11,
+                "false_negative": 0,
+                "blocked_actions": 8,
+                "raw_exact_match": 0.25,
+                "gated_exact_match": 0.75,
+                "micro_f1": 0.8253968253968254
+              }
+            }
+          },
+          "failure_policy": "Failed cases receive zero raw/gated exact-match credit; official valid-only micro-F1 remains conditional"
+        },
+        "ood": {
+          "cases": 48,
+          "valid_cases": 48,
+          "failed_cases": 0,
+          "raw_exact": 29,
+          "gated_exact": 32,
+          "raw_exact_accuracy_all_planned": 0.6041666666666666,
+          "gated_exact_accuracy_all_planned": 0.6666666666666666,
+          "official_valid_response_metrics": {
+            "reference_kind": "synthetic_local_policy",
+            "predictor_kind": "learned",
+            "overall": {
+              "cases": 48,
+              "raw_exact": 29,
+              "gated_exact": 32,
+              "true_positive": 63,
+              "false_positive": 18,
+              "false_negative": 16,
+              "blocked_actions": 7,
+              "raw_exact_match": 0.6041666666666666,
+              "gated_exact_match": 0.6666666666666666,
+              "micro_f1": 0.7875
+            },
+            "workflows": {
+              "customer_service": {
+                "cases": 12,
+                "raw_exact": 8,
+                "gated_exact": 8,
+                "true_positive": 24,
+                "false_positive": 3,
+                "false_negative": 5,
+                "blocked_actions": 3,
+                "raw_exact_match": 0.6666666666666666,
+                "gated_exact_match": 0.6666666666666666,
+                "micro_f1": 0.8571428571428571
+              },
+              "security_incidents": {
+                "cases": 12,
+                "raw_exact": 11,
+                "gated_exact": 11,
+                "true_positive": 11,
+                "false_positive": 1,
+                "false_negative": 1,
+                "blocked_actions": 1,
+                "raw_exact_match": 0.9166666666666666,
+                "gated_exact_match": 0.9166666666666666,
+                "micro_f1": 0.9166666666666666
+              },
+              "agent_trace_observability": {
+                "cases": 12,
+                "raw_exact": 3,
+                "gated_exact": 3,
+                "true_positive": 3,
+                "false_positive": 9,
+                "false_negative": 9,
+                "blocked_actions": 0,
+                "raw_exact_match": 0.25,
+                "gated_exact_match": 0.25,
+                "micro_f1": 0.25
+              },
+              "invoice_processing": {
+                "cases": 12,
+                "raw_exact": 7,
+                "gated_exact": 10,
+                "true_positive": 25,
+                "false_positive": 5,
+                "false_negative": 1,
+                "blocked_actions": 3,
+                "raw_exact_match": 0.5833333333333334,
+                "gated_exact_match": 0.8333333333333334,
+                "micro_f1": 0.8928571428571429
+              }
+            }
+          },
+          "failure_policy": "Failed cases receive zero raw/gated exact-match credit; official valid-only micro-F1 remains conditional"
+        }
+      }
+    },
+    "browser": {
+      "overall": {
+        "cases": 120,
+        "parents": 40,
+        "teacher_operations": {
+          "BLOCKED": 35,
+          "CLICK": 14,
+          "DONE": 16,
+          "SELECT": 35,
+          "TYPE_TEXT": 15,
+          "WAIT": 5
+        },
+        "variants": {
+          "ambiguous_observed_target": 10,
+          "completed": 7,
+          "goal_counterfactual": 13,
+          "goal_value_counterfactual_0": 8,
+          "goal_value_counterfactual_1": 8,
+          "id_and_order_permutation": 9,
+          "observed": 12,
+          "operation_unavailable": 12,
+          "ready": 2,
+          "requested_section_busy": 5,
+          "requested_value_unavailable": 6,
+          "single_candidate_target": 8,
+          "single_candidate_value": 8,
+          "target_action_unavailable": 5,
+          "untrusted_page_instructions": 7
+        },
+        "metrics": {
+          "operation": {
+            "correct": 113,
+            "total": 120,
+            "accuracy": 0.9416666666666667
+          },
+          "active_conditional": {
+            "correct": 98,
+            "total": 98,
+            "accuracy": 1.0
+          },
+          "forced_active_conditional": {
+            "correct": 16,
+            "total": 16,
+            "accuracy": 1.0
+          },
+          "proposal_exact": {
+            "correct": 113,
+            "total": 120,
+            "accuracy": 0.9416666666666667
+          }
+        }
+      },
+      "by_split": {
+        "test": {
+          "cases": 60,
+          "parents": 20,
+          "teacher_operations": {
+            "BLOCKED": 17,
+            "CLICK": 3,
+            "DONE": 8,
+            "SELECT": 25,
+            "TYPE_TEXT": 6,
+            "WAIT": 1
+          },
+          "variants": {
+            "ambiguous_observed_target": 3,
+            "completed": 3,
+            "goal_counterfactual": 6,
+            "goal_value_counterfactual_0": 5,
+            "goal_value_counterfactual_1": 4,
+            "id_and_order_permutation": 5,
+            "observed": 4,
+            "operation_unavailable": 6,
+            "ready": 2,
+            "requested_section_busy": 1,
+            "requested_value_unavailable": 4,
+            "single_candidate_target": 5,
+            "single_candidate_value": 4,
+            "target_action_unavailable": 3,
+            "untrusted_page_instructions": 5
+          },
+          "metrics": {
+            "operation": {
+              "correct": 58,
+              "total": 60,
+              "accuracy": 0.9666666666666667
+            },
+            "active_conditional": {
+              "correct": 56,
+              "total": 56,
+              "accuracy": 1.0
+            },
+            "forced_active_conditional": {
+              "correct": 9,
+              "total": 9,
+              "accuracy": 1.0
+            },
+            "proposal_exact": {
+              "correct": 58,
+              "total": 60,
+              "accuracy": 0.9666666666666667
+            }
+          }
+        },
+        "ood": {
+          "cases": 60,
+          "parents": 20,
+          "teacher_operations": {
+            "BLOCKED": 18,
+            "CLICK": 11,
+            "DONE": 8,
+            "SELECT": 10,
+            "TYPE_TEXT": 9,
+            "WAIT": 4
+          },
+          "variants": {
+            "ambiguous_observed_target": 7,
+            "completed": 4,
+            "goal_counterfactual": 7,
+            "goal_value_counterfactual_0": 3,
+            "goal_value_counterfactual_1": 4,
+            "id_and_order_permutation": 4,
+            "observed": 8,
+            "operation_unavailable": 6,
+            "requested_section_busy": 4,
+            "requested_value_unavailable": 2,
+            "single_candidate_target": 3,
+            "single_candidate_value": 4,
+            "target_action_unavailable": 2,
+            "untrusted_page_instructions": 2
+          },
+          "metrics": {
+            "operation": {
+              "correct": 55,
+              "total": 60,
+              "accuracy": 0.9166666666666666
+            },
+            "active_conditional": {
+              "correct": 42,
+              "total": 42,
+              "accuracy": 1.0
+            },
+            "forced_active_conditional": {
+              "correct": 7,
+              "total": 7,
+              "accuracy": 1.0
+            },
+            "proposal_exact": {
+              "correct": 55,
+              "total": 60,
+              "accuracy": 0.9166666666666666
+            }
+          }
+        }
+      },
+      "status_counts": {
+        "ok": 120
+      }
+    },
+    "drone": {
+      "overall": {
+        "cases": 120,
+        "parents": 40,
+        "variants": {
+          "brief_occlusion": 8,
+          "climb_available": 1,
+          "climb_clearance_limit": 7,
+          "climb_height_limit": 7,
+          "climb_unverified": 7,
+          "distant_geometry": 3,
+          "id_and_order_permutation": 5,
+          "imminent_geometry": 7,
+          "left_gap_geometry": 8,
+          "missing_gap_action": 12,
+          "observed": 8,
+          "observed_failed_scans": 5,
+          "occlusion_timer_only": 5,
+          "positive_reappearance": 1,
+          "right_gap_geometry": 3,
+          "route_goal_counterfactual": 4,
+          "side_goal_left": 13,
+          "side_goal_right": 11,
+          "single_permitted_maneuver": 5
+        },
+        "reference_maneuvers": {
+          "brake": 48,
+          "climb": 2,
+          "gap_left": 23,
+          "gap_right": 18,
+          "hold_course": 23,
+          "reacquire": 6
+        },
+        "reference_target_loss": {
+          "false": 90,
+          "true": 30
+        },
+        "metrics": {
+          "maneuver": {
+            "correct": 29,
+            "total": 115,
+            "accuracy": 0.25217391304347825
+          },
+          "forced_maneuver": {
+            "correct": 5,
+            "total": 5,
+            "accuracy": 1.0
+          },
+          "risk_level": {
+            "correct": 77,
+            "total": 120,
+            "accuracy": 0.6416666666666667
+          },
+          "target_loss": {
+            "correct": 116,
+            "total": 120,
+            "accuracy": 0.9666666666666667
+          },
+          "complete_decision": {
+            "correct": 12,
+            "total": 120,
+            "accuracy": 0.1
+          }
+        },
+        "probability_metrics_valid_only": {
+          "valid_cases": 120,
+          "selected_cases": 120,
+          "coverage": 1.0,
+          "risk_brier": 0.5083595252634886,
+          "risk_scalar_absolute_error": 0.414248292580871,
+          "risk_scalar_squared_error": 0.3162670974742172,
+          "target_loss_brier": 0.033005211875587186,
+          "risk_mean_probabilities": {
+            "0": 0.18667322374702053,
+            "1": 0.5219638520610664,
+            "2": 0.2913629241919132
+          }
+        },
+        "risk_level_counts": {
+          "reference_all_selected": {
+            "0": 31,
+            "1": 79,
+            "2": 10
+          },
+          "predicted_valid_only": {
+            "0": 0,
+            "1": 118,
+            "2": 2
+          }
+        }
+      },
+      "by_split": {
+        "test": {
+          "cases": 60,
+          "parents": 20,
+          "variants": {
+            "brief_occlusion": 5,
+            "climb_clearance_limit": 4,
+            "climb_height_limit": 6,
+            "climb_unverified": 5,
+            "distant_geometry": 1,
+            "imminent_geometry": 2,
+            "left_gap_geometry": 6,
+            "missing_gap_action": 7,
+            "observed": 4,
+            "observed_failed_scans": 3,
+            "occlusion_timer_only": 1,
+            "positive_reappearance": 1,
+            "right_gap_geometry": 1,
+            "route_goal_counterfactual": 2,
+            "side_goal_left": 8,
+            "side_goal_right": 3,
+            "single_permitted_maneuver": 1
+          },
+          "reference_maneuvers": {
+            "brake": 26,
+            "gap_left": 15,
+            "gap_right": 5,
+            "hold_course": 10,
+            "reacquire": 4
+          },
+          "reference_target_loss": {
+            "false": 42,
+            "true": 18
+          },
+          "metrics": {
+            "maneuver": {
+              "correct": 15,
+              "total": 59,
+              "accuracy": 0.2542372881355932
+            },
+            "forced_maneuver": {
+              "correct": 1,
+              "total": 1,
+              "accuracy": 1.0
+            },
+            "risk_level": {
+              "correct": 43,
+              "total": 60,
+              "accuracy": 0.7166666666666667
+            },
+            "target_loss": {
+              "correct": 60,
+              "total": 60,
+              "accuracy": 1.0
+            },
+            "complete_decision": {
+              "correct": 7,
+              "total": 60,
+              "accuracy": 0.11666666666666667
+            }
+          },
+          "probability_metrics_valid_only": {
+            "valid_cases": 60,
+            "selected_cases": 60,
+            "coverage": 1.0,
+            "risk_brier": 0.44199308409157007,
+            "risk_scalar_absolute_error": 0.33715339018455615,
+            "risk_scalar_squared_error": 0.23468632910976475,
+            "target_loss_brier": 0.025589473992595778,
+            "risk_mean_probabilities": {
+              "0": 0.19755441054768488,
+              "1": 0.5468025223940791,
+              "2": 0.2556430670582363
+            }
+          },
+          "risk_level_counts": {
+            "reference_all_selected": {
+              "0": 14,
+              "1": 43,
+              "2": 3
+            },
+            "predicted_valid_only": {
+              "0": 0,
+              "1": 60,
+              "2": 0
+            }
+          }
+        },
+        "ood": {
+          "cases": 60,
+          "parents": 20,
+          "variants": {
+            "brief_occlusion": 3,
+            "climb_available": 1,
+            "climb_clearance_limit": 3,
+            "climb_height_limit": 1,
+            "climb_unverified": 2,
+            "distant_geometry": 2,
+            "id_and_order_permutation": 5,
+            "imminent_geometry": 5,
+            "left_gap_geometry": 2,
+            "missing_gap_action": 5,
+            "observed": 4,
+            "observed_failed_scans": 2,
+            "occlusion_timer_only": 4,
+            "right_gap_geometry": 2,
+            "route_goal_counterfactual": 2,
+            "side_goal_left": 5,
+            "side_goal_right": 8,
+            "single_permitted_maneuver": 4
+          },
+          "reference_maneuvers": {
+            "brake": 22,
+            "climb": 2,
+            "gap_left": 8,
+            "gap_right": 13,
+            "hold_course": 13,
+            "reacquire": 2
+          },
+          "reference_target_loss": {
+            "false": 48,
+            "true": 12
+          },
+          "metrics": {
+            "maneuver": {
+              "correct": 14,
+              "total": 56,
+              "accuracy": 0.25
+            },
+            "forced_maneuver": {
+              "correct": 4,
+              "total": 4,
+              "accuracy": 1.0
+            },
+            "risk_level": {
+              "correct": 34,
+              "total": 60,
+              "accuracy": 0.5666666666666667
+            },
+            "target_loss": {
+              "correct": 56,
+              "total": 60,
+              "accuracy": 0.9333333333333333
+            },
+            "complete_decision": {
+              "correct": 5,
+              "total": 60,
+              "accuracy": 0.08333333333333333
+            }
+          },
+          "probability_metrics_valid_only": {
+            "valid_cases": 60,
+            "selected_cases": 60,
+            "coverage": 1.0,
+            "risk_brier": 0.5747259664354071,
+            "risk_scalar_absolute_error": 0.4913431949771858,
+            "risk_scalar_squared_error": 0.39784786583866966,
+            "target_loss_brier": 0.04042094975857859,
+            "risk_mean_probabilities": {
+              "0": 0.17579203694635603,
+              "1": 0.49712518172805403,
+              "2": 0.3270827813255898
+            }
+          },
+          "risk_level_counts": {
+            "reference_all_selected": {
+              "0": 17,
+              "1": 36,
+              "2": 7
+            },
+            "predicted_valid_only": {
+              "0": 0,
+              "1": 58,
+              "2": 2
+            }
+          }
+        }
+      },
+      "status_counts": {
+        "ok": 120
+      }
+    }
+  },
+  "games": {
+    "game_seed_model_episodes": 15,
+    "model_action_limit_total": 600,
+    "max_steps": 40,
+    "seeds": [
+      10001,
+      10002,
+      10003
+    ],
+    "all_valid_trajectories_replayed": 45,
+    "results": {
+      "snake": {
+        "policies": {
+          "model": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": 0,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 0.0,
+            "mean_reward_valid": -1.0,
+            "native_means_valid": {
+              "food_collected": 0.0,
+              "obstacles_cleared": null,
+              "progress_tiles": null,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          },
+          "random": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": 0,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 0.0,
+            "mean_reward_valid": -1.0,
+            "native_means_valid": {
+              "food_collected": 0.0,
+              "obstacles_cleared": null,
+              "progress_tiles": null,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          },
+          "teacher": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "max_steps": 3
+            },
+            "native_successes": 0,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 0.0,
+            "mean_reward_valid": 7.666666666666667,
+            "native_means_valid": {
+              "food_collected": 7.666666666666667,
+              "obstacles_cleared": null,
+              "progress_tiles": null,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          }
+        },
+        "paired_initial_states_match": {
+          "10001": true,
+          "10002": true,
+          "10003": true
+        },
+        "metric_definitions": {
+          "native_success": "The snake fills the whole 6x6 board and terminates without a collision. Surviving the 40-step budget alone is not success.",
+          "progress_metric": "food_collected is the number of food items eaten; it is reported separately from full-board success."
+        }
+      },
+      "trex_runner": {
+        "policies": {
+          "model": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": 3,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 1.0,
+            "mean_reward_valid": 12.0,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": 12.0,
+              "progress_tiles": null,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          },
+          "random": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": 0,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 0.0,
+            "mean_reward_valid": -0.6666666666666666,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": 0.3333333333333333,
+              "progress_tiles": null,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          },
+          "teacher": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": 3,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 1.0,
+            "mean_reward_valid": 12.0,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": 12.0,
+              "progress_tiles": null,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          }
+        },
+        "paired_initial_states_match": {
+          "10001": true,
+          "10002": true,
+          "10003": true
+        },
+        "metric_definitions": {
+          "native_success": "All 12 configured obstacles are cleared without collision in the original local box-physics runner.",
+          "progress_metric": "obstacles_cleared counts obstacles; one decision executes one obstacle, with jump launch timing supplied by the controller. This is not Chrome dinosaur physics or merely 40-step survival."
+        }
+      },
+      "tile_platformer": {
+        "policies": {
+          "model": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": 0,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 0.0,
+            "mean_reward_valid": 20.666666666666668,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": null,
+              "progress_tiles": 22.666666666666668,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          },
+          "random": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": 0,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 0.0,
+            "mean_reward_valid": 11.0,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": null,
+              "progress_tiles": 12.666666666666666,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          },
+          "teacher": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": 3,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 1.0,
+            "mean_reward_valid": 44.0,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": null,
+              "progress_tiles": 44.0,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          }
+        },
+        "paired_initial_states_match": {
+          "10001": true,
+          "10002": true,
+          "10003": true
+        },
+        "metric_definitions": {
+          "native_success": "Reach the right-hand flag (x >= 46 in the length-48 original tile simulator) without falling into a gap.",
+          "progress_metric": "progress_tiles is final x minus starting x=2; progress/reward is not stage completion."
+        }
+      },
+      "wikiracing": {
+        "policies": {
+          "model": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": 3,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 1.0,
+            "mean_reward_valid": 1.0,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": null,
+              "progress_tiles": null,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          },
+          "random": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "no_legal_actions": 3
+            },
+            "native_successes": 0,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 0.0,
+            "mean_reward_valid": 0.0,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": null,
+              "progress_tiles": null,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          },
+          "teacher": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": 3,
+            "native_success_outcomes_observed": 3,
+            "native_success_rate_valid_with_outcome": 1.0,
+            "mean_reward_valid": 1.0,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": null,
+              "progress_tiles": null,
+              "engine_total_reward": null,
+              "elapsed_tics": null
+            }
+          }
+        },
+        "paired_initial_states_match": {
+          "10001": true,
+          "10002": true,
+          "10003": true
+        },
+        "metric_definitions": {
+          "native_success": "Reach the configured target article in the supplied tiny fixed graph.",
+          "progress_metric": "This is the local fixture graph, not navigation on live Wikipedia."
+        }
+      },
+      "doom_basic": {
+        "policies": {
+          "model": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "max_steps": 1,
+              "terminal": 2
+            },
+            "native_successes": null,
+            "native_success_outcomes_observed": 0,
+            "native_success_rate_valid_with_outcome": null,
+            "mean_reward_valid": -29.0,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": null,
+              "progress_tiles": null,
+              "engine_total_reward": -29.0,
+              "elapsed_tics": 58.0
+            }
+          },
+          "random": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": null,
+            "native_success_outcomes_observed": 0,
+            "native_success_rate_valid_with_outcome": null,
+            "mean_reward_valid": 46.0,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": null,
+              "progress_tiles": null,
+              "engine_total_reward": 46.0,
+              "elapsed_tics": 0.0
+            }
+          },
+          "teacher": {
+            "attempted": 3,
+            "valid": 3,
+            "errors": 0,
+            "stopping_reasons": {
+              "terminal": 3
+            },
+            "native_successes": null,
+            "native_success_outcomes_observed": 0,
+            "native_success_rate_valid_with_outcome": null,
+            "mean_reward_valid": 80.33333333333333,
+            "native_means_valid": {
+              "food_collected": null,
+              "obstacles_cleared": null,
+              "progress_tiles": null,
+              "engine_total_reward": 80.33333333333333,
+              "elapsed_tics": 0.0
+            }
+          }
+        },
+        "paired_initial_states_match": {
+          "10001": true,
+          "10002": true,
+          "10003": true
+        },
+        "metric_definitions": {
+          "native_success": null,
+          "reported_outcomes": "The pinned wrapper defines no success boolean. Report genuine ViZDoom basic engine reward, native elapsed_tics and stopping reason only; terminal is not automatically a win, and max_steps means truncation."
+        }
+      }
+    },
+    "scope": "Actual local engine rewards/outcomes, no snapshot score substituted for game completion; max_steps means truncated; Doom has no invented success threshold"
+  },
+  "snapshot_coverage": {
+    "workflow": {
+      "planned_cases": 96,
+      "status_counts": {
+        "ok": 96
+      }
+    },
+    "browser": {
+      "planned_cases": 120,
+      "status_counts": {
+        "ok": 120
+      }
+    },
+    "drone": {
+      "planned_cases": 120,
+      "status_counts": {
+        "ok": 120
+      }
+    }
+  },
+  "protocol": {
+    "zero_shot_joint_choice_adaptation": true,
+    "candidate_limit": 10,
+    "generated_tokens": 0,
+    "temperature": 1.1422139406204224,
+    "exploration": 0.01,
+    "max_input_tokens": 16384,
+    "packed_budget": 6000,
+    "batch_heads_max": 16,
+    "game_max_steps": 40,
+    "game_seeds": [
+      10001,
+      10002,
+      10003
+    ],
+    "doom_decision_mode": "combined-v1",
+    "real_vizdoom_version": "1.2.4",
+    "minimum_free_gpu_gib": 64,
+    "competitors_rerun": false,
+    "external_browser_or_drone_actions": false,
+    "typed_probability_postprocessing": "Pinned upstream jev.api.format_response validates probability mass within 1e-6 and divides each candidate probability by its row total. This fixed software normalization is preserved and audited; no temperature fitting or decision repair is applied. This is not the JevBench no-renormalization reporting path."
+  },
+  "audit": {
+    "passed": true,
+    "aggregate_source_audit_sha256": "fac58f3564d25f55d21acbc8de25d0e4eee48a92285b1df123e75458bca56f41",
+    "auditor_sha256": "43ad00ff53b00cfd4ad545a862cdb0d15739552f9287e2f119912e9cf3a73a27",
+    "completion_sha256": "9abc2398f35a2d7dc7ca5637b52b52a8f0fd845aaba2927a2dd2b59c493234df",
+    "prepared_manifest_sha256": "7e08af1b0ab188b861b9303c695608001dace1f863802bc27ff4dc21c649905e",
+    "launch_lock_sha256": "c9d6885346ef50272d1454ce1683e9a381b4cc19c7f9d62525908483afb32ea1",
+    "all_sources_frozen_unchanged": true,
+    "complete_outputs_verified_before_snapshot_reference_parse": true,
+    "actual_valid_game_trajectories_CPU_replayed": 45
+  },
+  "limitations": [
+    "Historical reference results are100-step pilot checkpoints, not final Open-Jev27B-v1.1.",
+    "Exact saved cases/seed/selection and typed scoring are preserved; model uses fixed zero-shot joint-choice rendering, unlike original independent candidate scoring.",
+    "Browser and drone are offline synthetic snapshots, not actual browser-task success or flight performance.",
+    "Games use original local simplified engines/tiny Wiki fixture and three seeds; they are not official commercial-game competence benchmarks.",
+    "Direct model-call timing is not HTTP round-trip timing; no controlled speed comparison is made.",
+    "No fitted temperature, repaired model decisions, teacher fallbacks, or model training were used."
+  ],
+  "public_sources": {
+    "upstream": "https://github.com/Zefan-Cai/Open-Jev/tree/b718c4beaaf13af7d37504a23e99ef599e216e67",
+    "protocol": "https://github.com/Zefan-Cai/Open-Jev/blob/b718c4beaaf13af7d37504a23e99ef599e216e67/docs/model-evaluation.md",
+    "games": "https://github.com/Zefan-Cai/Open-Jev/blob/b718c4beaaf13af7d37504a23e99ef599e216e67/docs/games.md"
+  }
+}

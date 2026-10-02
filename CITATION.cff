@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use Canopy-Jev, please cite this software."
+type: software
+title: "Canopy-Jev: Shared-State Numerical Decision Inference"
+authors:
+  - family-names: Qiu
+    given-names: Ruoxi
+version: 0.1.0
+date-released: 2026-10-02
+license: MIT
+repository-code: "https://github.com/Camellia86/Canopy-Jev"
+url: "https://huggingface.co/Camellia86/Canopy-Jev-27B"

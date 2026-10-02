@@ -1,0 +1,114 @@
+{
+  "adapter_dtype": "float32",
+  "adapter_parameters": 6258688,
+  "adapter_state_sha256": "a69927092ad71a7f32de2079bed4b3f2a9d1f6a1fda0d78c5f367008ad260833",
+  "base_model": {
+    "architecture": [
+      "Qwen3_5ForConditionalGeneration"
+    ],
+    "config_sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab",
+    "hidden_size": 5120,
+    "index_sha256": "77042094076611b69791a610065f28b7013b8c621795fa86ddccc8bac7d1b9df",
+    "license": "Apache-2.0",
+    "model_id": "Qwen/Qwen3.8-27B",
+    "num_hidden_layers": 64,
+    "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "text_model_type": "qwen3_5_text",
+    "tokenizer_sha256": {
+      "tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+      "tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27"
+    },
+    "weight_identity_scope": "Exact config/index/tokenizer hashes; users supply the base snapshot. Full shard byte hashes are not included."
+  },
+  "conversion": {
+    "CPU_only": true,
+    "base_weights_exported": false,
+    "dtype_conversion": false,
+    "labels_exported": false,
+    "training_started": false
+  },
+  "default_template": "zero_shot_choice",
+  "files": {
+    "adapter.safetensors": "5026a53e56da0d5b597b4f9e09f057fc373c7f24aa054f9ac6569c7130063377",
+    "prior.safetensors": "686a7305719a868cedd967a11b8bfd947291fd09ad86ee60fc75b58724846d67"
+  },
+  "legacy_demonstrations_sha256": "2f161e50b47757e4b24b0b7d533d4c1cf7ca6486f664431d324dabcb0678a351",
+  "legacy_template": "legacy_five_demo requires a separately supplied SHA-bound official validation file",
+  "model_name": "Canopy-Jev",
+  "policy": {
+    "alpha_floor": 0.001,
+    "concentration": 256.0,
+    "exploration": 0.01,
+    "temperature": 1.1422139406204224
+  },
+  "prior_dtype": "float32",
+  "prior_state_sha256": "601d8523066da161f9beb26145dfe00265fad8281a67362c4a1cfe47e7401739",
+  "prior_temperature": 1.0659387111663818,
+  "schema": 1,
+  "source_checkpoint_sha256": "506410609a6ba6eb422182fddda095b81fa4923011ceaa3717e85a74817237f4",
+  "source_prior_sha256": "4620b120f1887a2240dc0cc748de9631b701e8db16a200450d3b41b4e25d6bee",
+  "tail": {
+    "adapted_linears": [
+      "layers.0.linear_attn.out_proj",
+      "layers.0.linear_attn.in_proj_qkv",
+      "layers.0.mlp.gate_proj",
+      "layers.0.mlp.up_proj",
+      "layers.0.mlp.down_proj",
+      "layers.1.linear_attn.out_proj",
+      "layers.1.linear_attn.in_proj_qkv",
+      "layers.1.mlp.gate_proj",
+      "layers.1.mlp.up_proj",
+      "layers.1.mlp.down_proj",
+      "layers.2.linear_attn.out_proj",
+      "layers.2.linear_attn.in_proj_qkv",
+      "layers.2.mlp.gate_proj",
+      "layers.2.mlp.up_proj",
+      "layers.2.mlp.down_proj",
+      "layers.3.self_attn.q_proj",
+      "layers.3.self_attn.k_proj",
+      "layers.3.self_attn.v_proj",
+      "layers.3.self_attn.o_proj",
+      "layers.3.mlp.gate_proj",
+      "layers.3.mlp.up_proj",
+      "layers.3.mlp.down_proj"
+    ],
+    "config_sha256": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab",
+    "copied_frozen_parameters": 1522079904,
+    "dropout": 0.0,
+    "end_block_exclusive": 64,
+    "index_sha256": "77042094076611b69791a610065f28b7013b8c621795fa86ddccc8bac7d1b9df",
+    "original_backbone_trainable_parameters": 0,
+    "rank": 16,
+    "scale": 32.0,
+    "start_block": 60,
+    "trainable_parameters": 6258688
+  },
+  "tested_environment": {
+    "cuda_toolkit": "12.4",
+    "library_source_sha256": {
+      "fla.modules.l2norm": "30f7feebdbfa87b8e90c143ec62a7fa0781bfd736c856c0ec69452f0c778be3f",
+      "fla.ops.utils.cache": "a64b09ffd3f51aed547ad72559dee94cb9aeafd2a5f02c6c8e60a6e020147a9c",
+      "torch.utils.checkpoint": "7a05799e678085df1b81d512bed679c35053fb6225ea90c96661306f93140f6c",
+      "transformers.cache_utils": "028a55fb163870d5f5d020473ee90fd3324e0a527ab33f1a626648f52690220a",
+      "transformers.integrations.sdpa_attention": "87f933d1a2d8508df572da5c0748c6b24c22ff2b625796949957dcd86cc57564",
+      "transformers.models.qwen3_5.modeling_qwen3_5": "641da34484f6b9769e28615c680cc4e3202afbf5bdbf1da7d56d5a3d678918c7",
+      "triton.runtime.autotuner": "0497baf6ff4c48c4b3764bd84940ebbd7ac015e2d9d71e80fbb6949a9cf62ded"
+    },
+    "python": "3.10.12",
+    "torch_build": "2.6.0+cu124",
+    "versions": {
+      "fla-core": "0.5.2",
+      "flash-linear-attention": "0.5.2",
+      "huggingface-hub": "1.33.0",
+      "numpy": "1.26.4",
+      "safetensors": "0.5.3",
+      "tokenizers": "0.22.2",
+      "torch": "2.6.0",
+      "transformers": "5.8.0",
+      "triton": "3.2.0"
+    }
+  },
+  "variant": "rl64_weight01_step_1200",
+  "weight_license": "Apache-2.0",
+  "zero_shot_prompt_protocol": "Exact measured JevBench input adapter"
+}
